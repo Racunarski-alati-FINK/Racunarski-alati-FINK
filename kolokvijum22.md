@@ -527,3 +527,42 @@ with open('rezultati_torke.txt', 'w') as fajl:
 ```
 </details>
 
+# Grupa 4b
+## Prvi zadatak
+Funkcija uzima celobrojni niz i ceo broj x.
+Funkcija racuna i glavnom programu vraća srednju vrednost članova niza koji su veći od broja x i sortira niz u rastući poredak.
+_Napomena: ne koristiti metode i funkcije za sortiranje._
+<details markdown='block'>
+<summary>Rešenje</summary>
+	
+```python
+def funkcija(niz, x):
+	srednja_vrednost = 0
+    suma = 0
+    brojac = 0
+
+    for i in range(len(niz)):
+        if niz[i] > x:
+            suma += niz[i]
+            brojac += 1
+
+    srednja_vrednost = suma/brojac
+
+    
+    for i in range(0, len(niz)-1):
+        for j in range(i+1, len(niz)):
+            if niz[i] > niz[j]:
+                niz[i], niz[j] = niz[j], niz[i]
+
+#ovde je moguce koristiti i klasicnu zamenu mesta clanovima
+                privremena = niz[i]
+                niz[i] = niz[j]
+                niz[j] = privremena
+
+    return srednja_vrednost, niz
+
+
+#glavni program
+print(funkcija([5, 4, 9, -11, 13, 19, 2, 6, -7], 4))
+```
+</details>
