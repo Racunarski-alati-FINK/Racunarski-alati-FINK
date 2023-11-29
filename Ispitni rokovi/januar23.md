@@ -6,9 +6,9 @@ Napisati funkciju koja uzima dva niza celih brojeva A i B I računa treći niz C
 
 primer: 
 
-        A = [1, 2, 3, 4, 5]
-		B = [-1, -2, -3, -4, 5]
-		srednja_vrednost = 2
+	A = [1, 2, 3, 4, 5]
+	B = [-1, -2, -3, -4, 5]
+	srednja_vrednost = 2
 
 
 <details markdown='block'>
