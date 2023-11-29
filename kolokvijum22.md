@@ -57,7 +57,6 @@ with open('nisu_polozili.txt', 'w') as fajl:
 	for student in sorted(nisu_polozili):
     	fajl.write(f"{student[0]}\n")
 ```
-
 </details>
 
 <details markdown='block'>
