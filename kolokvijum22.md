@@ -365,6 +365,7 @@ with open('izlaz3a.txt', 'w') as fajl:
 ```
 </details>
 
+<details markdown='block'>
 <summary>Rešenje korišćenjem rečnika </summary>
 
 ```python
@@ -394,8 +395,9 @@ a neparnim manjim od X  dodeli vrednost 1.
 Primer: niz = [2, 6, -7, 0, 1, 5], x = 4  => [0, 5, 2, 1, 0, 1]  
 Primer: niz = [5, 1, 8, -2, 7, -3, 10], x = 6 => [0, 0, 7, 1, 1, -2, 1]  
 
+<details markdown='block'>
 <summary>Rešenje</summary>
-
+	
 ```python
 def funkcija(niz, x):
     print(niz)
