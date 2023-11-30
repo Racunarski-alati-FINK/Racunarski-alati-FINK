@@ -1,0 +1,6 @@
+Petar Jankovic,MI,103,42,32
+Milos Petrovic,RTSI,55,12,59
+Jelena Mitrovic,UI,91,30,8
+Filip Radovanovic,RTSI,105,22,57
+Petar Novkovic,MI,160,10,18
+Ana Mitic,IZZS,102,29,44

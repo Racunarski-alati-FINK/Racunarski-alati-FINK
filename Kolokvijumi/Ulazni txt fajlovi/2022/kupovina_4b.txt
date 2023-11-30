@@ -1,0 +1,6 @@
+Prasak,2,1200
+Juneci but,1,1500
+Sapun,3,75
+Jabuka,10,30
+Jagode,2,350
+Vino,4,800
