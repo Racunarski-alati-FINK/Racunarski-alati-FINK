@@ -233,99 +233,40 @@ print(funkcija([1, 2, 3, 4, 5]))
 # Drugi zadatak
 Videti [drugi zadatak](#drugi-zadatak-2) grupe 2a.
 
-# Grupa 3a
-## Prvi Zadatak
-Funkcija uzima kvadratnu matricu (n x n).
-Glavnom programu vraca sumu ivicnih clanova.
-Ivicni clanovi su clanovi prvog reda, prve kolone,
-poslednjeg reda i poslednje kolone.
-Izbeći sumiranje dvostrukih članova (članova u uglovima matrice).
+# Grupa 2c
+## Prvi zadatak
+Napisati funkciju koja od glavnog programa preuzima celobrojni niz proizvoljne dužine i računa razliku proizvoda i sume članova čija je vrednost manja od vrednosti zadate u glavnom programu. Funkcija glavnom programu vraća izračunatu razliku.  
 
-Primer:  
+primer: 
 
-        [ 3, 6,  1
-    A =   7, 3,  9      => suma = 3 + 6 + 1 + 7 + 9 -1 + 5 + 11 = 41
-         -1,  5, 11]
-
-	   [ 1, 1, 1, 1,
-         1, 0, 0, 1,
-    A =  1, 0, 0, 1,     => suma = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 12 
-         1, 1, 1, 1]
+	A = [1, 2, 3, 4, 5]
+	suma = 12
+	proizvod = 60
+	razlika = proizvod - suma
 
 
 <details markdown='block'>
 <summary>Rešenje</summary>
 
 ```python
-def funkcija(matrica):
-    suma = 0 
-    for i in range(len(matrica)):
-        if i == 0 or i == len(matrica)-1:
-            for j in range(len(matrica)):
-                suma += matrica[i][j]
-        else:
-            suma += matrica[i][0] + matrica[i][-1]
-
-    return suma
-
+def funkcija(A,X):
+	proizvod = 1
+	suma = 0
+	for i in range(len(A)):
+		if A[i] > X:
+			suma += A[i]
+			proizvod *= A[i]
+	razlika = proizvod - suma
+	return razlika
+    
 #pozivanje glavnog programa
-print(funkcija([[3, 6, 1], [7, 3, 9], [-1, 5, 11]]))
-print(funkcija([[1, 1, 1, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]]))
+print(funkcija([1, 2, 3, 4, 5],2))
 ```
 </details>
 
 # Drugi zadatak
-Napisati program koji otvara fajl temperature.csv.  
-Svaka linija fajla sadrzi podatke o temperaturama u nedelji u formatu:  
-    dan;temperatura
-Kreirati listu temperature koja sadrzi uredjene parove (dan, temperatura, osecaj).  
-Promenljiva osecaj ima vrednost:  
- -'hladno' ako je temperatura <= 10  
- -'toplo' ako je tmeperatura > 10  
-
-Program kreira izlazni fajl rezultat.txt gde je svaka linija formatirana:  
-    
-    dan,temperatura,osecaj   
-
-<details markdown='block'>
-<summary>Rešenje korišćenjem uređenih parova </summary>
-	
-```python
-dani = []
-with open('ulaz3a.txt', 'r') as fajl:
-    for linija in fajl:
-        dan, temperatura = linija.rstrip().split(';')
-        if int(temperatura) <= 10:
-            osecaj = 'hladno'
-        else:
-            osecaj = 'toplo'
-        dani.append((dan, int(temperatura), osecaj))
-
-with open('izlaz3a.txt', 'w') as fajl:
-    for i in range(len(dani)):
-        fajl.write(f"{dani[i][0]} {dani[i][1]} {dani[i][2]}\n")
-```
-</details>
-
-<details markdown='block'>
-<summary>Rešenje korišćenjem rečnika </summary>
-
-```python
-dani = []
-with open('ulaz3a.txt', 'r') as fajl:
-    for linija in fajl:
-        dan, temperatura = linija.rstrip().split(';')
-        if int(temperatura) <= 10:
-            osecaj = 'hladno'
-        else:
-            osecaj = 'toplo'
-        dani.append({'dan':dan, 'temperatura':int(temperatura), 'osecaj':osecaj})
-
-with open('izlaz3a.txt', 'w') as fajl:
-    for dan in dani:
-        fajl.write(f"{dan['dan']} {dan['temperatura']} {dan['osecaj']}\n")
-```
-</details>
+# Drugi zadatak
+Videti [drugi zadatak](#drugi-zadatak-2) grupe 2a.
 
 # Grupa 3b
 ## Prvi zadatak
