@@ -280,7 +280,7 @@ Primer:
 
 ```python
 tacke = []
-with open('ulaz2b.txt', 'r') as fajl:
+with open('tacke_2b.txt', 'r') as fajl:
     for linija in fajl:
         xkoord, ykoord = linija.rstrip().split(',')
         tacka = {'x':float(xkoord), 'y':float(ykoord)}
@@ -339,7 +339,7 @@ print(funkcija([[1, 1, 1, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]]))
 </details>
 
 # Drugi zadatak
-Napisati program koji otvara fajl temperature.csv.  
+Napisati program koji otvara fajl [temperature_3a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/temperature_3a.txt).  
 Svaka linija fajla sadrzi podatke o temperaturama u nedelji u formatu:  
     dan;temperatura
 Kreirati listu temperature koja sadrzi uredjene parove (dan, temperatura, osecaj).  
@@ -356,7 +356,7 @@ Program kreira izlazni fajl rezultat.txt gde je svaka linija formatirana:
 	
 ```python
 dani = []
-with open('ulaz3a.txt', 'r') as fajl:
+with open('temperature_3a.txt', 'r') as fajl:
     for linija in fajl:
         dan, temperatura = linija.rstrip().split(';')
         if int(temperatura) <= 10:
@@ -376,7 +376,7 @@ with open('izlaz3a.txt', 'w') as fajl:
 
 ```python
 dani = []
-with open('ulaz3a.txt', 'r') as fajl:
+with open('temperature_3a.txt', 'r') as fajl:
     for linija in fajl:
         dan, temperatura = linija.rstrip().split(';')
         if int(temperatura) <= 10:
@@ -425,7 +425,7 @@ print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl tacke.txt.  
+Napisati program koji otvara fajl [tacke_3b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/tacke_3b.txt).  
 Svaka linija fajla predstavlja koordinate u formatu:  
 xkoord,ykoord  
 Napraviti listu tacke i u nju smestiti recnike,  
@@ -454,7 +454,7 @@ Primer:
 	
 ```python
 tacke = []
-with open('ulaz2b.txt', 'r') as fajl:
+with open('tacke_3b.txt', 'r') as fajl:
 	for linija in fajl:
 		xkoord, ykoord = linija.rstrip().split(',')
         tacka = {'x':float(xkoord), 'y':float(ykoord)}
@@ -505,7 +505,7 @@ print(funkcija([2, -4, 3, 5, 9, 1], [3, -2, 0, 1]))
 </details>
 
 # Drugi zadatak
-Napisati program koji otvara fajl rezultati.txt.   
+Napisati program koji otvara fajl [rezultati_4a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/rezultati_4a.txt).   
 Svaka linija fajla sadrzi ime studenta i poene na ispitu u formatu:
 
  	ime studenta;poeni  
@@ -520,7 +520,7 @@ Svaka linija fajla sadrzi ime studenta i poene na ispitu u formatu:
 	
 ```python
 studenti = []
-with open('ulaz4a.txt') as fajl:
+with open('rezultati_4a.txt') as fajl:
     for linija in fajl:
         ime, poeni = linija.rstrip().split(';')
         if int(poeni) >= 51:
@@ -578,7 +578,7 @@ print(funkcija([5, 4, 9, -11, 13, 19, 2, 6, -7], 4))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara program kupovina.txt.  
+Napisati program koji otvara program [kupovina_4b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/kupovina_4b.txt).  
 Svaka linija fajla sadrzi podatke od namirnici i kolicini za kupovinu:  
 
     namirnica,kolicina,cena po komadu
@@ -598,13 +598,13 @@ Poslednja linija fajla je:
 	
 ```python
 proizvodi = []
-with open('ulaz4b.txt', 'r') as fajl:
+with open('kupovina_4b.txt', 'r') as fajl:
     for linija in fajl:
         namirnica, kolicina, cena = linija.rstrip().split(',')
         novac = int(kolicina)*int(cena)
         proizvodi.append((namirnica, novac))
 
-with open('kupovina.txt', 'w') as fajl:
+with open('kupovina_4b.txt', 'w') as fajl:
     for i in range(len(proizvodi)):
         fajl.write(f"{proizvodi[i][0]} {proizvodi[i][1]}\n")
 ```
@@ -655,7 +655,7 @@ print(funkcija([[6, 4, 1], [-5, -9, 0], [8, -2, -3]]))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl koeficijenti.txt.  
+Napisati program koji otvara fajl [koeficijenti_5a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/koeficijenti_5a.txt).  
 Svaka linija fajla predstavlja jedan koeficijent u kvadratnoj jednacini.  
 Koeficijente smestiti u listu koeficijenti.  
 
@@ -679,7 +679,7 @@ Primer:
 	
 ```python
 koeficijenti = []
-with open('ulaz5a.txt', 'r') as fajl:
+with open('koeficijenti_5a.txt', 'r') as fajl:
     for linija in fajl:
         koeficijenti.append(int(linija))
 
@@ -736,7 +736,7 @@ print(funkcija([1, -5, 6, 3, -1, 7, -1]))
 
 
 ## Drugi zadatak
-Napisati progam koji otvara fajl glasovi.txt.  
+Napisati progam koji otvara fajl [glasovi_5b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/glasovi_5b.txt).  
 Fajl sadrzi spisak kandidata za predsednika Studentskog parlamenta  
 FINK u formatu:  
 
@@ -760,7 +760,7 @@ U poslednjoj liniji stampa se ime novog predsednika parlamenta:
 	
 ```python
 kandidati = []
-with open('ulaz5b.txt', 'r') as fajl:
+with open('glasovi_5b.txt', 'r') as fajl:
     for linija in fajl:
         ime, smer, glasovi_mi, glasovi_ui, glasovi_rtsi = linija.rstrip().split(',')
         glasovi = int(glasovi_mi) + int(glasovi_ui) + int(glasovi_rtsi)
@@ -827,7 +827,7 @@ print(funkcija([2, 8, 5, 4, 8, 6, 0, 8], 8))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl rezultati.txt  
+Napisati program koji otvara fajl [rezultati_6a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/rezultati_6a.txt)  
 u kome svaka linija sadrzi ime studenta i poene  
 na prvom i drugom kolokvijumu u formatu:  
 
@@ -845,7 +845,7 @@ Format izlaznog fajla spisak.txt:
 	
 ```python
 studenti = []
-with open('ulaz6a.txt', 'r') as fajl:
+with open('rezultati_6a.txt', 'r') as fajl:
     for linija in fajl:
         ime, poeni1, poeni2 = linija.rstrip().split(',')
         poeni = int(poeni1) + int(poeni2)
@@ -904,7 +904,7 @@ print(funkcija([[1, 1, 1, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]]))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl temperature.csv.  
+Napisati program koji otvara fajl [temperature_6b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/temperature_6b.txt).  
 Svaka linija fajla sadrzi podatke o temperaturama u nedelji u formatu:  
 
     dan;temperatura  
