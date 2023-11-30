@@ -1,0 +1,7 @@
+ponedeljak;17
+utorak;8
+sreda;-2
+cetvrtak;12
+petak;14
+subota;0
+nedelja;-4
