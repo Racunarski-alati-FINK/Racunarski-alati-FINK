@@ -26,7 +26,7 @@ print(funkcija([[2, -4, 3], [3, -2, 1], [-8, 5, 2]]))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl rezultati.txt u kome svaka linija sadrzi ime studenta, poene na prvom i drugom kolokvijumu u formatu:
+Napisati program koji otvara fajl  [rezultati_1a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/rezultati_1a.txt) u kome svaka linija sadrži ime studenta, poene na prvom i drugom kolokvijumu u formatu:
 
         ime,poeni1,poen2
 	
@@ -67,7 +67,7 @@ with open('nisu_polozili.txt', 'w') as fajl:
 ``` python
 polozili = []
 nisu_polozili = []
-with open('ulaz1a.txt') as fajl:
+with open('rezultati_1a.txt') as fajl:
 	for linija in fajl:
     	ime, poeni1, poeni2 = linija.rstrip().split(',')
         poeni = int(poeni1) + int(poeni2)
@@ -114,7 +114,7 @@ print(funkcija([[5, 8, 9], [0, 6, 12], [-3, 5, 1], [8, 1, 2]]))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl reci.txt u kome svaka linija predstavlja jednu reč.
+Napisati program koji otvara fajl [reci_1b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/reci_1b.txt) u kome svaka linija predstavlja jednu reč.
 Svaku reč smestiti u listu reci. Program takođe dobija skup reči, i treba da u izlazni
 fajl rezultat.txt zapiše sve reči koje se nalaze u obe liste i broj takvih reči. 
 
@@ -124,7 +124,7 @@ fajl rezultat.txt zapiše sve reči koje se nalaze u obe liste i broj takvih re�
 ```python
 skup = ['robot', 'macka', 'masinstvo', 'kolokvijum']
 reci = []
-with open('ulaz1b.txt', 'r') as fajl:
+with open('reci_1b.txt', 'r') as fajl:
     for linija in fajl:
         reci.append(linija.rstrip())
 
@@ -170,7 +170,7 @@ print(funkcija([2, 2, 2, 3, 4, 5]))
 </details>
 
 ## Drugi zadatak 
-Napisati program koji otvara fajl prodavnica.txt
+Napisati program koji otvara fajl [prodavnica_2a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/prodavnica_2a.txt)
 u kome svaka linija sadrži podatke o artiklima u
 prodavnici u formatu:  
   
@@ -190,7 +190,7 @@ A kao poslednju liniju fajla vraća ukupnu zaradu za taj dan.
 	
 ```python
 artikli = []
-with open('ulaz2a.txt', 'r') as fajl:
+with open('prodavnica_2a.txt', 'r') as fajl:
     for linija in fajl:
         naziv, nabavna_cena, prodajna_cena, broj_prodatih = linija.rstrip().split(',')
         zarada = (int(prodajna_cena) - int(nabavna_cena)) * int(broj_prodatih)
@@ -207,7 +207,7 @@ with open('artikli.txt', 'w') as fajl:
 	
 ```python
 artikli = []
-with open('ulaz2a.txt', 'r') as fajl:
+with open('prodavnica_2a.txt', 'r') as fajl:
     for linija in fajl:
         naziv, nabavna_cena, prodajna_cena, broj_prodatih = linija.rstrip().split(',')
         zarada = (int(prodajna_cena) - int(nabavna_cena)) * int(broj_prodatih)
@@ -252,7 +252,7 @@ print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
 </details>
 
 # Drugi zadatak
-Napisati program koji otvara fajl tacke.txt.    
+Napisati program koji otvara fajl [tacke_2b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/tacke_2b.txt).    
 Svaka linija fajla predstavlja koordinate u formatu:    
 xkoord,ykoord  
 Napraviti listu tacke i u nju smestiti recnike,  
