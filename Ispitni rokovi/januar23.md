@@ -116,7 +116,7 @@ print(funkcija([1, 2, 3, 4, 5], [-1, -2, -3, -4, 5]))
 </details>
 
 ## Drugi zadatak
-Videti [drugi zadatak](##drugi-zadatak) grupe 1a.
+Videti [drugi zadatak](#drugi-zadatak) grupe 1a.
 
 # Grupa 2a
 ## Prvi zadatak
@@ -193,84 +193,45 @@ with open('rezultat_2a.txt', 'w') as fajl:
 ```
 </details>
 
-TU SMO    
-
 # Grupa 2b
 ## Prvi zadatak
-Funkcija uzima celobrojni niz i ceo broj X. Sortira niz u opadajućem poretku. Zatim unuli sve parne brojeve koji su veći od X, a neparnim manjim od X  dodeli vrednost 1. 
+Napisati funkciju koja od glavnog programa preuzima celobrojni niz proizvoljne dužine, i računa razliku proizvoda i sume svih članova čija je vrednost manja od srednje vrednosti niza. Funkcija glavnom programu vraća izračunatu razliku.   
 
-	Primer: niz = [2, 6, -7, 0, 1, 5], x = 4  => [0, 5, 2, 1, 0, 1]  
-	Primer: niz = [5, 1, 8, -2, 7, -3, 10], x = 6 => [0, 0, 7, 1, 1, -2, 1]  
+primer: 
+	
+ 	A = [1, 2, 3, 4, 5]
+    srednja_vrednost = 3
+    suma = 3
+    proizvod = 2
+    razlika = proizvod - suma
+  
 
 <details markdown='block'>
 <summary>Rešenje</summary>
 
 ```python
-def funkcija(niz, x):
-    for i in range(0, len(niz)-1):
-        for j in range(i+1, len(niz)):
-            if niz[i] < niz[j]:
-                niz[i], niz[j] = niz[j], niz[i]
+def funkcija(A):
+	suma = 0
+    for i in range(len(A)):
+        suma += A[i]
+	srednja_vrednost = suma / len(A)   # ili srednja_vrednost = sum(A)/len(A)
 
-    for i in range(len(niz)):
-        if niz[i] % 2 == 0 and niz[i] > x:
-            niz[i] = 0
-        elif niz[i] % 2 != 0 and niz[i] < x:
-            niz[i] = 1
- 
-    return niz
+	suma = 0
+	proizvod = 1
 
+	for i in range(len(A)):
+		if A[i] < srednja_vrednost:
+			suma += A[i]
+			proizvod *= A[i]
+    return srednja_vrednost
 
-print(funkcija([2, 6, -7, 0, 1, 5], 4))
-print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
+# glavni program
+print(funkcija([1, 2, 3, 4, 5]))
 ```
 </details>
 
 # Drugi zadatak
-Napisati program koji otvara fajl tacke.txt.    
-Svaka linija fajla predstavlja koordinate u formatu:    
-xkoord,ykoord  
-Napraviti listu tacke i u nju smestiti recnike,  
-koji sadrze podatke iz ucitanog fajla, pri cemu recnik treba da bude u formatu:  
-tacka = {'x':xkoord, 'y':ykoord}  
-Sortirati tacke ykoord u rastucem poretku,
-i tako sortirane tacke stampati u izlazni fajl rezultat.txt.
-Poslednji red izlaznog fajla rezultat.txt) treba da sadrzi srednju vrednost svih xkoord.
-
-Primer:
-
-	tacke.txt  
-	0,1  
-	2,10  
-	10,-3  
- 
-	rezultat.txt  
-	10,-3  
-	0,1  
-	2,10  
-	Srednja vrednost svih x koordinata je: 4  
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-
-```python
-tacke = []
-with open('ulaz2b.txt', 'r') as fajl:
-    for linija in fajl:
-        xkoord, ykoord = linija.rstrip().split(',')
-        tacka = {'x':float(xkoord), 'y':float(ykoord)}
-        tacke.append(tacka)
-
-x_ukupno = 0
-y_ukupno = 0
-with open('izlaz2b.txt', 'w') as fajl:
-    for tacka in sorted(tacke, key=lambda tacka:tacka['y'], reverse=False):
-        fajl.write(f"{tacka['x']} {tacka['y']}\n")
-        x_ukupno += tacka['x']
-    fajl.write(f"Srednja vrednost svih x koordinata je {x_ukupno/len(tacke)}")
-
-```
-</details>
+Videti [drugi zadatak](#drugi-zadatak-2) grupe 2a.
 
 # Grupa 3a
 ## Prvi Zadatak
