@@ -286,7 +286,20 @@ def funkcija(A):
 	return A_novi
 #pozivanje glavnog progam
 print(funkcija([1, 2, -3, 4, -5]))
+```
+</details>
 
+<details markdown='block'>
+<summary>Rešenje korišćenjem for petlje</summary>
+	
+```python
+def funkcija(A):
+    A_novi = []
+    for i in range(len(A)):
+        A_novi.append(A[len(A)-i-1])
+    return A_novi
+#pozivanje glavnog progam
+print(funkcija([1, 2, -3, 4, -5]))
 ```
 </details>
 
