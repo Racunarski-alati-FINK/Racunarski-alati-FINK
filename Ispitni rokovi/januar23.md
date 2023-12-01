@@ -235,7 +235,8 @@ Videti [drugi zadatak](#drugi-zadatak-2) grupe 2a.
 
 # Grupa 2c
 ## Prvi zadatak
-Napisati funkciju koja od glavnog programa preuzima celobrojni niz proizvoljne dužine i računa razliku proizvoda i sume članova čija je vrednost manja od vrednosti zadate u glavnom programu. Funkcija glavnom programu vraća izračunatu razliku.  
+Napisati funkciju koja od glavnog programa preuzima celobrojni niz proizvoljne dužine i računa razliku proizvoda i sume članova čija je vrednost manja od vrednosti zadate u glavnom programu. 
+Funkcija glavnom programu vraća izračunatu razliku.  
 
 primer: 
 
@@ -265,38 +266,26 @@ print(funkcija([1, 2, 3, 4, 5],2))
 </details>
 
 # Drugi zadatak
-# Drugi zadatak
 Videti [drugi zadatak](#drugi-zadatak-2) grupe 2a.
 
-# Grupa 3b
+# Grupa 3a
 ## Prvi zadatak
-Funkcija uzima celobrojni niz i ceo broj X.  
-Sortira niz u opadajućem poretku.  
-Zatim unuli sve parne brojeve koji su veći od X,
-a neparnim manjim od X  dodeli vrednost 1.
+Napisati funkciju koja uzima niz realnih brojeva A i prepakuje niz tako da redosled članova niza bude suprotan redosledu prilikom učitavanja 
+niza u glavnom programu (prvi član postaje poslednji, drugi član postaje pretposlednji itd.). Funkcija glavnom programu vraća novoformirani niz
+primer: 
 
-	Primer: niz = [2, 6, -7, 0, 1, 5], x = 4  => [0, 5, 2, 1, 0, 1]  
-	Primer: niz = [5, 1, 8, -2, 7, -3, 10], x = 6 => [0, 0, 7, 1, 1, -2, 1]  
+	A = [1, 2, -3, 4, -5]
+	A_novi = [-5, 4, -3, 2, 1]
 
 <details markdown='block'>
-<summary>Rešenje</summary>
+<summary>Rešenje korišćenjem isecanja</summary>
 	
 ```python
-def funkcija(niz, x):
-    print(niz)
-    for i in range(0, len(niz)-1):
-        for j in range(i+1, len(niz)):
-            if niz[i] < niz[j]:
-                niz[i], niz[j] = niz[j], niz[i]
-    for i in range(len(niz)):
-        if niz[i] % 2 == 0 and niz[i] > x:
-            niz[i] = 0
-        elif niz[i] % 2 != 0 and niz[i] < x:
-	return niz
-
+def funkcija(A):
+	A_novi = A[::-1]
+	return A_novi
 #pozivanje glavnog progam
-print(funkcija([2, 6, -7, 0, 1, 5], 4))
-print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
+print(funkcija([1, 2, -3, 4, -5]))
 
 ```
 </details>
