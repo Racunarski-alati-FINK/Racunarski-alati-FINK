@@ -304,7 +304,7 @@ print(funkcija([1, 2, -3, 4, -5]))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl [dostavnica.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/dostavnica.txt)) sa spiskom dostava jedne firme u toku jednog dana u formatu:
+Napisati program koji otvara fajl [dostavnica.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/dostavnica.txt) sa spiskom dostava jedne firme u toku jednog dana u formatu:
 
 	tip vozila, registracija, predjeni kilometri, broj dostava
 	Reno twingo, KG111HH, 342, 12
