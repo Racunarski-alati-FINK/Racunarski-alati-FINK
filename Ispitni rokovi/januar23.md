@@ -304,117 +304,58 @@ print(funkcija([1, 2, -3, 4, -5]))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl tacke.txt.  
-Svaka linija fajla predstavlja koordinate u formatu:  
-xkoord,ykoord  
-Napraviti listu tacke i u nju smestiti recnike,  
-koji sadrze podatke iz ucitanog fajla, pri cemu recnik treba  
-da bude u formatu:  
-tacka = {'x':xkoord, 'y':ykoord}  
-Sortirati tacke ykoord u rastucem poretku,  
-i tako sortirane tacke stampati u izlazni fajl rezultat.txt.  
-Poslednji red izlaznog fajla rezultat.txt) treba da sadrzi srednju vrednost svih xkoord.  
+Napisati program koji otvara fajl [dostavnica.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/Januar%202023/dostavnica.txt) sa spiskom dostava jedne firme u toku jednog dana u formatu:
 
-Primer:
+	tip vozila, registracija, predjeni kilometri, broj dostava
+	Reno twingo, KG111HH, 342, 12
 
-	tacke.txt  
-	0,1  
-	2,10  
-	10,-3  
-
-	rezultat.txt  
-	10,-3  
-	0,1  
-	2,10  
-	Srednja vrednost svih x koordinata je: 4  
+U izlazni fajl štampati spisak vozila sortiranih po profitu ostvarenom tog dana. Predjeni kilometar košta 34 dinara a svaka dostava vredi 250 dinara.
 
 <details markdown='block'>
 <summary>Rešenje</summary>
 	
 ```python
-tacke = []
-with open('ulaz2b.txt', 'r') as fajl:
-	for linija in fajl:
-		xkoord, ykoord = linija.rstrip().split(',')
-        tacka = {'x':float(xkoord), 'y':float(ykoord)}
-        tacke.append(tacka)
-x_ukupno = 0
-y_ukupno = 0
-with open('izlaz2b.txt', 'w') as fajl:
-    for tacka in sorted(tacke, key=lambda tacka:tacka['y'], reverse=False):
-        fajl.write(f"{tacka['x']} {tacka['y']}\n")
-        x_ukupno += tacka['x']
-    fajl.write(f"Srednja vrednost svih x koordinata je {x_ukupno/len(tacke)}")
+spisak = []
+
+with open('dostavnica.txt') as fajl:
+    for linija in fajl:
+        tip_vozila, registracija, predjeni_km, br_dostava = linija.lstrip().rstrip().split(',')
+        profit = int(br_dostava) * 250 - int(predjeni_km)*34
+        vozilo = {'tip_vozila':tip_vozila, 'registracija':registracija, 'profit':profit}
+        spisak.append(vozilo)
+        
+with open('rezultat_3a.txt', 'w') as fajl:
+        for vozilo in sorted(spisak, key = lambda vozilo:vozilo['profit'], reverse=True):
+             fajl.write(f"{vozilo['tip_vozila']}, {vozilo['registracija']}, {vozilo['profit']}\n")
 ```
 </details>
 
 # Grupa 4a
 ## Prvi zadatak
-Funkcija izračunava razliku između srednjih vrednosti elemenata niza A (n) i niza B (m).
+Napisati funkciju koja uzima niz realnih brojeva i transformiše niz zamenom mesta parovima uzastopnih vrednosti ako važi uslov da je x[i] < x[i+1]. Funkcija glavnom program vraća izmenjeni niz.    
+primer:     
+
+	X = [1, 2, -3, 4, -5, 6]
+	X_novo = [2, 1, 4, -3, 6, -5]
+
 <details markdown='block'>
 <summary>Rešenje</summary>
 	
 ```python
-def funkcija(A, B):
-	srednja_vred_A = 0
-    srednja_vred_B = 0
-    
-    suma_A = 0
-    suma_B = 0
-
-    brojac_A = 0
-    brojac_B = 0
-
-    for i in range(len(A)):
-        brojac_A += 1
-        suma_A += A[i]
-
-    for i in range(len(B)):
-        brojac_B += 1
-        suma_B += B[i]
-
-    srednja_vred_A = suma_A / brojac_A
-    srednja_vred_B = suma_B / brojac_B
-
-    return srednja_vred_A-srednja_vred_B
-    
+def funkcija(X):
+    for i in range(0,len(X),2):
+        if X[i] < X[i+1]:
+            pomocna = X[i]
+            X[i] = X[i+1]
+            X[i+1] = pomocna
+    return X
 #glavni program
-print(funkcija([2, -4, 3, 5, 9, 1], [3, -2, 0, 1]))
+print(funkcija([1, 2, -3, 4, -5, 6]))
 ```
 </details>
 
 # Drugi zadatak
-Napisati program koji otvara fajl rezultati.txt.   
-Svaka linija fajla sadrzi ime studenta i poene na ispitu u formatu:
-
- 	ime studenta;poeni  
- Program treba da pročita podatke o studentima,  
- na osnovu broja poena dodeli argument položio (>=51)  
- ili nije položio (<51) studentu i štampa izlaznu datoteku  
- spisak.txt u formatu:   
-  ime studenta - polozio ime studenta - nije polozio  
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-```python
-studenti = []
-with open('ulaz4a.txt') as fajl:
-    for linija in fajl:
-        ime, poeni = linija.rstrip().split(';')
-        if int(poeni) >= 51:
-            status = 'polozio'
-        else:
-            status = 'nije polozio'
-        studenti.append((ime, status))
-
-print(studenti)
-
-with open('rezultati_torke.txt', 'w') as fajl:
-    for i in range(len(studenti)):
-        fajl.write(f"{studenti[i][0]} - {studenti[i][1]}\n")
-```
-</details>
+Videti [drugi zadatak](#drugi-zadatak-3) grupe 3a.
 
 # Grupa 4b
 ## Prvi zadatak
