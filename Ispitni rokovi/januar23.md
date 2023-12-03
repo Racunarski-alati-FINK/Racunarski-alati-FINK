@@ -330,7 +330,7 @@ with open('rezultat_3a.txt', 'w') as fajl:
 ```
 </details>
 
-# Grupa 4a
+# Grupa 3b
 ## Prvi zadatak
 Napisati funkciju koja uzima niz realnih brojeva i transformiše niz zamenom mesta parovima uzastopnih vrednosti ako važi uslov da je x[i] < x[i+1]. Funkcija glavnom program vraća izmenjeni niz.    
 primer:     
@@ -355,7 +355,7 @@ print(funkcija([1, 2, -3, 4, -5, 6]))
 </details>
 
 # Drugi zadatak
-Videti [drugi zadatak](#drugi-zadatak-3) grupe 3a.
+Videti [drugi zadatak](#drugi-zadatak-4) grupe 3a.
 
 # Grupa 4b
 ## Prvi zadatak
