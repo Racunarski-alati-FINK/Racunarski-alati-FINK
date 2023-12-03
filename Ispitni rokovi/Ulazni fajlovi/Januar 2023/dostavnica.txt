@@ -1,0 +1,3 @@
+Reno twingo, KG111HH, 342, 12
+Fiat panda, KG222GG, 30, 5
+Fiat seicento, KG333AA, 200, 13
