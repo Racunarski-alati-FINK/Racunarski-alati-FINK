@@ -35,7 +35,7 @@ print(funkcija([1, 2, 3, 4, 5], [-1, -2, -3, -4, 5]))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl [listing.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/Januar%202023/listing.txt) koji sadrži spisak brojeva telefona u formatu:  
+Napisati program koji otvara fajl [listing.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/listing.txt) koji sadrži spisak brojeva telefona u formatu:  
 
     broj telefona, broj sms poruka, trajanje poziva
     0601112223, 252, (7:32)
@@ -150,7 +150,7 @@ print(funkcija([1, 2, -3, 4, -5])
 
 ## Drugi zadatak 
 
-Napisati program koji otvara fajl [raspored.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/Januar%202023/raspored.txt) koji sadrži dnevni raspored filmova u bioskopu u formatu:
+Napisati program koji otvara fajl [raspored.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/raspored.txt) koji sadrži dnevni raspored filmova u bioskopu u formatu:
 
     naziv filma,vreme početka, dužina trajanja
     Avatar 2, 17:45, 218
@@ -304,7 +304,7 @@ print(funkcija([1, 2, -3, 4, -5]))
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl [dostavnica.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/Januar%202023/dostavnica.txt) sa spiskom dostava jedne firme u toku jednog dana u formatu:
+Napisati program koji otvara fajl [dostavnica.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/dostavnica.txt)) sa spiskom dostava jedne firme u toku jednog dana u formatu:
 
 	tip vozila, registracija, predjeni kilometri, broj dostava
 	Reno twingo, KG111HH, 342, 12
