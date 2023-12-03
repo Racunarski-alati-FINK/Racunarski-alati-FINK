@@ -357,94 +357,33 @@ print(funkcija([1, 2, -3, 4, -5, 6]))
 # Drugi zadatak
 Videti [drugi zadatak](#drugi-zadatak-4) grupe 3a.
 
-# Grupa 4b
+# Grupa 3c
 ## Prvi zadatak
-Funkcija uzima celobrojni niz i ceo broj x.
-Funkcija racuna i glavnom programu vraća srednju vrednost članova niza koji su veći od broja x i sortira niz u rastući poredak.
-_Napomena: ne koristiti metode i funkcije za sortiranje._
+Napisati funkciju koja preuzima celobrojni niz i neparnim brojevima 
+dodeljuje vrednost 0. Funkcija glavnom program vraća procenat članova koji su jednaki 0.
+
 <details markdown='block'>
 <summary>Rešenje</summary>
 	
 ```python
-def funkcija(niz, x):
-	srednja_vrednost = 0
-    suma = 0
-    brojac = 0
 
-    for i in range(len(niz)):
-        if niz[i] > x:
-            suma += niz[i]
-            brojac += 1
-
-    srednja_vrednost = suma/brojac
-
-    
-    for i in range(0, len(niz)-1):
-        for j in range(i+1, len(niz)):
-            if niz[i] > niz[j]:
-                niz[i], niz[j] = niz[j], niz[i]
-
-#ovde je moguce koristiti i klasicnu zamenu mesta clanovima
-                privremena = niz[i]
-                niz[i] = niz[j]
-                niz[j] = privremena
-
-    return srednja_vrednost, niz
-
-
+def funkcija(X):
+        br = 0
+    for i in range(0,len(X)):
+        if X[i] %2 != 0:
+            X[i] = 0
+            br += 1
+    procenat = 100 * br/len(X)
+    print("Novi niz je ", X)
+    return str(procenat) + ' %' # vraća "procenat" kao string i dodaje znak %
+	
 #glavni program
-print(funkcija([5, 4, 9, -11, 13, 19, 2, 6, -7], 4))
+print(funkcija([1, 2, -3, 4, 5]))
 ```
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara program kupovina.txt.  
-Svaka linija fajla sadrzi podatke od namirnici i kolicini za kupovinu:  
-
-    namirnica,kolicina,cena po komadu
-
-Program stampa fajl racun.txt u kome je ispisan svaki proizvod   
-i potrosen novac po proizvodu (kolicina*cena)
-u formatu:  
-
-    namirnica,novac
-
-Poslednja linija fajla je:  
-
-    Ukupno,suma novca 
-    
-<details markdown='block'>
-<summary>Rešenje korišćenjem uređenih parova</summary>
-	
-```python
-proizvodi = []
-with open('ulaz4b.txt', 'r') as fajl:
-    for linija in fajl:
-        namirnica, kolicina, cena = linija.rstrip().split(',')
-        novac = int(kolicina)*int(cena)
-        proizvodi.append((namirnica, novac))
-
-with open('kupovina.txt', 'w') as fajl:
-    for i in range(len(proizvodi)):
-        fajl.write(f"{proizvodi[i][0]} {proizvodi[i][1]}\n")
-```
-</details>
-<details markdown='block'>
-<summary>Rešenje korišćenjem rečnika</summary>
-	
-```python
-proizvodi = []
-with open('ulaz4b.txt', 'r') as fajl:
-    for linija in fajl:
-        namirnica, kolicina, cena = linija.rstrip().split(',')
-        proizvod = {'namirnica':namirnica, 'novac':int(kolicina)*int(cena)}
-        proizvodi.append(proizvod)
-
-with open('kupovina_recnici.txt', 'w') as fajl:
-    for proizvod in proizvodi:
-        fajl.write(f"{proizvod['namirnica']} {proizvod['novac']
-```
-</details>
+Videti [drugi zadatak](#drugi-zadatak-4) grupe 3a.
 
 # Grupa 5a
 ## Prvi zadatak
