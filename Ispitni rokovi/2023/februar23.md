@@ -53,9 +53,32 @@ with open ('bioskop.txt','r') as fajl:
         film = {'naziv_filma':naziv_filma, 'vreme_zavrsetka':ukupno_vreme}
         spisak.append(film)
 
+## Grupa 1b
+## Prvi zadatak
+Napisati funkciju koja uzima niz realnih brojeva A i ceo broj X, a zatim računa zbir svih članova većih od X i proizvod članova manjih od X. Funkcija glavnom programu vraća razliku sračunatih vrednosti za sumu i proizvod
+primer: 
 
-with open ('rezultat_1a.txt', 'w') as fajl:
-    for film in sorted(spisak, key = lambda film:film['vreme_zavrsetka']):
-        fajl.write(f"{film['naziv_filma']}\n")
+  	A = [1, 2, -3, 4, -5]
+	razlika = -30
+
+<details markdown='block'>
+<summary>Rešenje </summary>
+
+```python
+def funkcija(A,X):
+    suma = 0
+    proizvod = 1
+    for i in range(len(A)):
+        if A[i] > X:
+            suma += A[i]
+        elif A[i] < X:
+            proizvod *= A[i]
+    return suma - proizvod
+
+# poziv glavnog programa
+print(funkcija([1,2,-3,4,-5],4))
 ```
 </details>
+
+## Drugi zadatak
+Videti rešenje [drugugog zadatka](#drugi-zadatak) grupe 1a.
