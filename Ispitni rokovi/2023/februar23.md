@@ -85,4 +85,4 @@ print(funkcija([1,2,-3,4,-5],4))
 </details>
 
 ## Drugi zadatak
-Videti rešenje [drugugog zadatka](#drugi-zadatak) grupe 1a.
+Videti rešenje [drugi zadatak](#drugi-zadatak) grupe 1a.
