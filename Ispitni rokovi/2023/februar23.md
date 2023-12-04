@@ -44,6 +44,8 @@ U izlazni fajl štampati nazive filmova sortirane u rastućem redosledu po vreme
 
 <details markdown='block'>
 <summary>Rešenje </summary>
+	
+```python
 spisak = []
 with open ('bioskop.txt','r') as fajl:
     for linija in fajl:
@@ -52,6 +54,8 @@ with open ('bioskop.txt','r') as fajl:
         ukupno_vreme = int(sati) * 60 + int(minuti) + int(trajanje)
         film = {'naziv_filma':naziv_filma, 'vreme_zavrsetka':ukupno_vreme}
         spisak.append(film)
+```
+</details>
 
 ## Grupa 1b
 ## Prvi zadatak
