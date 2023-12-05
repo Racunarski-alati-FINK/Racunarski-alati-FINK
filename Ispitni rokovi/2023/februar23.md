@@ -173,3 +173,66 @@ with open('rezultat_2a.txt', 'w') as fajl:
 ```
 </details>
 
+## Grupa 2b
+## Prvi zadatak
+Napisati funkciju koja uzima dva niza celih brojeva A i B i 
+formira treći niz C tako što na i-tom mestu 
+postavlja manji od dva člana A[i] i B[i].
+Funkcija glavnom programu vraća niz C sortiran u opadajućem redosledu.
+_Napomena: Ne koristiti metod i funkciju za sortiranje_
+primer: 
+
+  	A = [1, 2, -10, 4, -5]
+        B = [-1, -2, 3, -4, 5]
+	C = [-1, -2, -4, -5, -10]
+
+<details markdown='block'>
+<summary>Rešenje korišćenjem funkcije min() </summary>
+
+```python
+def funkcija(A,B):
+    C = []
+    for i in range(len(A)):
+        C.append(min(A[i],B[i]))
+
+    for i in range(0, len(C)-1):        # petlje za sortiranje
+        for j in range(i+1,len(C)):
+            if C[i] < C[j]:
+                pomocna = C[i]
+                C[i] = C[j]
+                C[j] = pomocna
+    return C
+# glavni program:
+print(funkcija([1, 2, -10, 4, -5], [-1, -2, 3, -4, -5]))
+```
+</details>
+
+<details markdown='block'>
+<summary>Rešenje bez funkcije min() </summary>
+
+```python
+def funkcija(A,B):
+    C = []
+    for i in range(len(A)):
+        if A[i] < B[i]:
+            C.append(A[i])
+        else:
+            C.append(B[i])
+
+    for i in range(0, len(C)-1):        # petlje za sortiranje
+        for j in range(i+1,len(C)):
+            if C[i] < C[j]:
+                pomocna = C[i]
+                C[i] = C[j]
+                C[j] = pomocna
+    return C
+        
+# glavni program:
+print(funkcija([1, 2, -10, 4, -5], [-1, -2, 3, -4, -5]))
+```
+</details>
+
+## Drugi zadatak 
+Videti rešenje [drugi zadatak](#drugi-zadatak-2) grupe 2a.
+
+
