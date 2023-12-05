@@ -85,7 +85,7 @@ print(funkcija([1,2,-3,4,-5],4))
 </details>
 
 ## Drugi zadatak
-Videti rešenje [drugi zadatak](#drugi-zadatak) grupe 1a.
+Videti [drugi zadatak](#drugi-zadatak) grupe 1a.
 
 ## Grupa 2a
 ## Prvi zadatak
@@ -147,7 +147,7 @@ print(funkcija([1, 2, -3, 4, -5], [-1, -2, 3, -4, -5]))
 </details>
 
 ## Drugi zadatak 
-Napisati program koji otvara fajl nabavka.txt koji sadrži spisak robe u formatu:
+Napisati program koji otvara fajl [nabavka.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Februar/nabavka.txt) koji sadrži spisak robe u formatu:
 
 	Naziv artikla, Cena po komadu, Broj komada
 	secer, 100, 7
@@ -233,6 +233,6 @@ print(funkcija([1, 2, -10, 4, -5], [-1, -2, 3, -4, -5]))
 </details>
 
 ## Drugi zadatak 
-Videti rešenje [drugi zadatak](#drugi-zadatak-2) grupe 2a.
+Videti [drugi zadatak](#drugi-zadatak-2) grupe 2a.
 
 
