@@ -1,0 +1,3 @@
+Budimpešta, 50, 130
+Prag, 100, 200
+Zagreb, 60, 20
