@@ -248,7 +248,7 @@ Napisati funkciju koja uzima niz celih brojeva A, pronalazi najmanji parni eleme
 
 ```python
 def funkcija(A):
-	minimum = A[0]  # pretpostavka da je prvi član minimalan - greška ako ne postoji manji a parni član, ako je prvi najveći, a neparan!!
+	minimum = A[0]  # pretpostavka da je prvi član minimalan - greška ako ne postoji manji a parni član, ako je prvi npr neparan
 					# može se pretpostaviti da je neki mnogo veliki broj minimalan npr min = 100e100
     maximum = A[0]	# pretpostavka da je prvi član maksimalan
     for i in range(len(A)):
@@ -325,3 +325,62 @@ with open('rezultat_3a_nisu_polozili.txt', 'w') as fajl:
         fajl.write(f"{student['ime i prezime']}, {student['rezultat']}\n")
 ```
 </details>
+
+## Grupa 3b
+## Prvi zadatak
+Napisati funkciju koja uzima niz celih brojeva A, pronalazi najmanji neparni element niza i najveći element sa parnim indeksom. Funkcija glavnom programu vraća razliku najvećeg i najmanjeg elementa.
+
+    	primer: 
+	 	
+   		A = [1, 2, -3, -4, 5]
+		razlika = 8
+
+<details markdown='block'>
+<summary>Rešenje (nesavršeno) </summary>
+
+```python
+def funkcija(A):
+	minimum = A[0]  # pretpostavka da je prvi član minimalan - greška ako ne postoji manji a neparni član, ako je prvi npr paran
+					# može se pretpostaviti da je neki mnogo veliki broj minimalan npr min = 100e100
+    maximum = A[0]	# pretpostavka da je prvi član maksimalan
+    for i in range(len(A)):
+        if A[i] % 2 != 0 and A[i] < minimum:
+            minimum = A[i]
+  
+        if  i % 2 == 0 and A[i] > maximum:
+            maximum = A[i]
+    print(minimum)
+    print(maximum)
+    rezultat = maximum - minimum
+    return rezultat
+# glavni program:
+print(funkcija([1, 2, -3, -4, 5]))
+```
+</details>
+
+<details markdown='block'>
+<summary>Tačnije rešenje</summary>
+
+```python
+def funkcija(A):
+	minimum = None					# pretpostavka da su minimum i maximum None
+    maximum = None
+    for i in range(len(A)):
+        if A[i] % 2 != 0 and (minimum is None or A[i] < minimum):
+            minimum = A[i]
+  
+        if  i % 2 == 0 and (maximum is None or A[i] > maximum):
+            maximum = A[i]
+    print(minimum)
+    print(maximum)
+    rezultat = maximum - minimum
+    return rezultat
+        
+# glavni program:
+print(funkcija([1, 2, -3, -4, 5]))
+```
+</details>
+
+## Drugi zadatak 
+Videti [drugi zadatak](#drugi-zadatak-4) grupe 3a.
+
