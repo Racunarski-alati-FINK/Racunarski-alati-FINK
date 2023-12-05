@@ -439,4 +439,33 @@ with open('rezultat_4a.txt', 'w') as fajl:
 ```
 </details>
 
+# Grupa 4b
+## Prvi zadatak
+Napisati funkciju koja uzima niz realnih brojeva A i sve pozitivne neparne članove niza pretvara u negativne i štampa novodobijeni niz. Funkcija glavnom programu vraća broj pretvorenih članova.
+    primer: 
+	         
+  	A = [1, -2, 3, 4, -5]
+	novo_A = [1, 2, 3, 4,-5]
+	broj = 1
 
+<details markdown='block'>
+<summary>Rešenje</summary>
+
+```python
+    broj = 0
+    print(f"Polazni niz je: {A}")
+    for i in range(len(A)):
+        if A[i] > 0 and A[i] % 2 != 0:
+            A[i] = -1 * A[i]
+            broj += 1
+    print(f"Krajnji niz je: {A}")
+    return broj
+
+# glavni program:
+print(f"Broj izmenjenih članova je {funkcija([1, -2, 3, 4, -5])}")
+```
+</details>
+
+
+## Drugi zadatak 
+Videti [drugi zadatak](#drugi-zadatak-6) grupe 4a.
