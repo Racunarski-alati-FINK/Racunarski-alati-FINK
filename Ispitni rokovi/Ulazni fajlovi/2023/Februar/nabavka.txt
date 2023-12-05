@@ -1,0 +1,3 @@
+secer, 100, 7
+brasno, 75, 5
+mleko, 50, 1
