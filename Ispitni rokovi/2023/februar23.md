@@ -523,3 +523,35 @@ with open('rezultat_5a.txt', 'w') as fajl:
         fajl.write(f"{item['destinacija']}, {item['ukupno cena']}\n")
 ```
 </details>
+
+# Grupa 5a
+## Prvi zadatak
+Napisati funkciju koja uzima kvadratnu matricu A, pronalazi najmanjui neparni član matrice i najveći član na glavnoj dijagonali. Funkcija glavnom programu vraća proizvod najvećeg i najmanjeg člana.
+primer: 
+    
+    A = ([[2, -4, 3], [3, -2, 0],[8, 5, 2]]
+    proizvod = max_parni * min_glavna	 (proizvod = 4)
+
+<details markdown='block'>
+<summary>Rešenje</summary>
+
+```python
+    def funkcija(A):
+    min_neparni = A[0][0]
+    max_glavna = A[0][0]
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            if A[i][j] % 2 != 0 and A[i][j] < min_neparni:
+                main_neparni = A[i][j]
+            if i == j and A[i][j] > max_glavna:
+                max_glavna = A[i][j]
+    return main_neparni * max_glavna
+# glavni program:
+print(funkcija([[2, -4, 3], [3, -2, 0],[8, 5, 2]]))
+```
+</details>
+
+
+## Drugi zadatak 
+Videti [drugi zadatak](#drugi-zadatak-8) grupe 5a.
+
