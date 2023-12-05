@@ -235,4 +235,93 @@ print(funkcija([1, 2, -10, 4, -5], [-1, -2, 3, -4, -5]))
 ## Drugi zadatak 
 Videti [drugi zadatak](#drugi-zadatak-2) grupe 2a.
 
+## Grupa 3a
+## Prvi zadatak
+Napisati funkciju koja uzima niz celih brojeva A, pronalazi najmanji parni element niza i najveći element sa neparnim indeksom. Funkcija glavnom programu vraća razliku najvećeg i najmanjeg elementa.
+    	primer: 
+	 	
+   		A = [1, 2, -3, -4, -5]
+		razlika = 6
 
+<details markdown='block'>
+<summary>Rešenje (nesavršeno) </summary>
+
+```python
+def funkcija(A):
+	minimum = A[0]  # pretpostavka da je prvi član minimalan - greška ako ne postoji manji a parni član, ako je prvi najveći, a neparan!!
+					# može se pretpostaviti da je neki mnogo veliki broj minimalan npr min = 100e100
+    maximum = A[0]	# pretpostavka da je prvi član maksimalan
+    for i in range(len(A)):
+        if A[i] % 2 == 0 and A[i] < minimum:
+            minimum = A[i]
+  
+        if  i % 2 != 0 and A[i] > maximum:
+            maximum = A[i]
+    print(minimum)
+    print(maximum)
+    rezultat = maximum - minimum
+    return rezultat
+# glavni program:
+print(funkcija([1, 2, -3, -4, -5]))
+```
+</details>
+
+<details markdown='block'>
+<summary>Tačnije rešenje</summary>
+
+```python
+	minimum = None					# pretpostavka da su minimum i maximum None
+    maximum = None
+    for i in range(len(A)):
+        if A[i] % 2 == 0 and (minimum is None or A[i] < minimum):
+            minimum = A[i]
+  
+        if  i % 2 != 0 and (maximum is None or A[i] > maximum):
+            maximum = A[i]
+    print(minimum)
+    print(maximum)
+    rezultat = maximum - minimum
+    return rezultat
+        
+# glavni program:
+print(funkcija([1, 2, -3, -4, -5]))
+```
+</details>
+
+## Drugi zadatak 
+Napisati program koji otvara fajl [test.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Februar/test.txt) koji sadrži spisak studenata u formatu:
+
+	Ime i prezime, broj tačnih odgovora, broj netačnih odgovora
+	Petar Petrović, 23, 7
+ 
+U izlazni fajl štampati spisak studenata koji su položili test u opadajućem poretku po sumi bodova 
+(test je položen ako je br_tačnih – br netačnih >= 15
+
+<details markdown='block'>
+<summary>Tačnije rešenje</summary>
+
+```python
+
+polozili = []
+nisu_polozili = []
+
+with open ('test.txt', 'r') as fajl:
+    for linija in fajl:
+        ime_prezime, br_tacnih, br_netacnih  = linija.lstrip().rstrip().split(',')
+        rezultat = int(br_tacnih) - int(br_netacnih)
+        if rezultat >= 15:
+            studenti_polozili = {'ime i prezime':ime_prezime, 'rezultat':rezultat}
+            polozili.append(studenti_polozili)
+        else:
+            studenti_nisu_polozili = {'ime i prezime':ime_prezime, 'rezultat':rezultat}
+            nisu_polozili.append(studenti_nisu_polozili)
+    
+with open('rezultat_3a_polozili.txt', 'w') as fajl:
+    for student in sorted(polozili, key = lambda studenti_polozili:studenti_polozili['rezultat']):
+        fajl.write(f"{student['ime i prezime']}, {student['rezultat']}\n")
+
+with open('rezultat_3a_nisu_polozili.txt', 'w') as fajl:
+    for student in sorted(nisu_polozili, key = lambda studenti_polozili:studenti_polozili['rezultat']):
+        fajl.write(f"{student['ime i prezime']}, {student['rezultat']}\n")
+```
+</details>
