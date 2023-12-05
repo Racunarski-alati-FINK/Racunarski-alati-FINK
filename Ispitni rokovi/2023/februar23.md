@@ -469,3 +469,57 @@ print(f"Broj izmenjenih članova je {funkcija([1, -2, 3, 4, -5])}")
 
 ## Drugi zadatak 
 Videti [drugi zadatak](#drugi-zadatak-6) grupe 4a.
+
+
+# Grupa 5a
+## Prvi zadatak
+Napisati funkciju koja uzima kvadratnu matricu A, pronalazi najveći parni član matrice i najmanji član na glavnoj dijagonali. Funkcija glavnom programu vraća proizvod najvećeg i najmanjeg člana.
+primer: 
+    
+    A = ([[2, -4, 3], [3, -2, 0],[8, 5, 2]]
+    proizvod = max_parni * min_glavna	 (proizvod = -16)
+
+<details markdown='block'>
+<summary>Rešenje</summary>
+
+```python
+    def funkcija(A):
+    max_parni = A[0][0]
+    min_glavna = A[0][0]
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            if A[i][j] % 2 == 0 and A[i][j] > max_parni:
+                max_parni = A[i][j]
+            if i == j and A[i][j] < min_glavna:
+                min_glavna = A[i][j]
+    return max_parni * min_glavna
+# glavni program:
+print(funkcija([[2, -4, 3], [3, -2, 0],[8, 5, 2]]))
+```
+</details>
+
+
+## Drugi zadatak 
+Napisati program koji otvara fajl [agencija.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Februar/agencija.txt) koji sadrži spisak destinacija u formatu:
+
+	Destinacija, Broj putnika, Cena
+	Budimpešta, 50, 130
+U izlazni fajl štampati destinacije sortirane u rastućem redosledu po ukupnoj zaradi po aranžmanu (broj putnika * cena)
+
+<details markdown='block'>
+<summary>Rešenje</summary>
+	
+```python
+spisak = []
+with open ('agencija.txt', 'r') as fajl:
+    for linija in fajl:
+        destinacija, br_putnika, cena  = linija.lstrip().rstrip().split(',')
+        ukupno_cena = int(br_putnika) * float(cena)
+        aranzmani = {'destinacija':destinacija, 'ukupno cena':ukupno_cena}
+        spisak.append(aranzmani)
+    
+with open('rezultat_5a.txt', 'w') as fajl:
+    for item in sorted(spisak, key = lambda aranzmani:aranzmani['ukupno cena']):
+        fajl.write(f"{item['destinacija']}, {item['ukupno cena']}\n")
+```
+</details>
