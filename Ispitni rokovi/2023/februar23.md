@@ -385,14 +385,13 @@ print(funkcija([1, 2, -3, -4, 5]))
 Videti [drugi zadatak](#drugi-zadatak-4) grupe 3a.
 
 # Grupa 4a
-
 ## Prvi zadatak
 Napisati funkciju koja uzima niz realnih brojeva A i sve negativne parne članove niza pretvara u pozitivne i štampa novodobijeni niz. Funkcija glavnom programu vraća broj pretvorenih članova.
     primer: 
 	         
-	  	A = [1, -2, 3, 4, -5]
-		novo_A = [1, 2, 3, 4,-5]
-		broj = 1
+  	A = [1, -2, 3, 4, -5]
+	novo_A = [1, 2, 3, 4,-5]
+	broj = 1
 
 <details markdown='block'>
 <summary>Rešenje</summary>
@@ -406,9 +405,6 @@ Napisati funkciju koja uzima niz realnih brojeva A i sve negativne parne članov
             broj += 1
     print(f"Krajnji niz je: {A}")
     return broj
-
-# glavni program:
-print(f"Broj izmenjenih članova je {funkcija([1, -2, 3, 4, -5])}")
 
 # glavni program:
 print(f"Broj izmenjenih članova je {funkcija([1, -2, 3, 4, -5])}")
