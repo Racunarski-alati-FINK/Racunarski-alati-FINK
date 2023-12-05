@@ -86,3 +86,90 @@ print(funkcija([1,2,-3,4,-5],4))
 
 ## Drugi zadatak
 Videti rešenje [drugi zadatak](#drugi-zadatak) grupe 1a.
+
+## Grupa 2a
+## Prvi zadatak
+Napisati funkciju koja uzima dva niza celih brojeva A i B i 
+formira treći niz C tako što na i-tom mestu 
+postavlja manji od dva člana A[i] i B[i].
+Funkcija glavnom programu vraća niz C sortiran u rastućem redosledu.
+_Napomena: Ne koristiti metod i funkciju za sortiranje_
+primer: 
+
+  	A = [1, 2, -3, 4, -5]
+        B = [-1, -2, 3, -4, 5]
+	C = [-5, -4, -3, -2, -1]
+
+<details markdown='block'>
+<summary>Rešenje korišćenjem funkcije min() </summary>
+
+```python
+def funkcija(A,B):
+    C = []
+    for i in range(len(A)):
+        C.append(min(A[i],B[i]))
+
+    for i in range(0, len(C)-1):        # petlje za sortiranje
+        for j in range(i+1,len(C)):
+            if C[i] > C[j]:
+                pomocna = C[i]
+                C[i] = C[j]
+                C[j] = pomocna
+    return C
+# glavni program:
+print(funkcija([1, 2, -3, 4, -5], [-1, -2, 3, -4, -5]))
+```
+</details>
+
+<details markdown='block'>
+<summary>Rešenje bez funkcije min() </summary>
+
+```python
+def funkcija(A,B):
+    C = []
+    for i in range(len(A)):
+        if A[i] < B[i]:
+            C.append(A[i])
+        else:
+            C.append(B[i])
+
+    for i in range(0, len(C)-1):        # petlje za sortiranje
+        for j in range(i+1,len(C)):
+            if C[i] > C[j]:
+                pomocna = C[i]
+                C[i] = C[j]
+                C[j] = pomocna
+    return C
+        
+# glavni program:
+print(funkcija([1, 2, -3, 4, -5], [-1, -2, 3, -4, -5]))
+```
+</details>
+
+## Drugi zadatak 
+Napisati program koji otvara fajl nabavka.txt koji sadrži spisak robe u formatu:
+
+	Naziv artikla, Cena po komadu, Broj komada
+	secer, 100, 7
+ 
+U izlazni fajl štampati sortirane nazive artikala u rastućem poretku po ukupnoj ceni nabavke. 
+
+<details markdown='block'>
+<summary>Rešenje </summary>
+
+```python
+spisak = []
+with open ('nabavka.txt', 'r') as fajl:
+    for linija in fajl:
+        artikal, cena_po_komadu, br_komada = linija.lstrip().rstrip().split(',')
+        ukupna_vrednost = float(cena_po_komadu) * float(br_komada)
+        artikli = {'artikal':artikal,'ukupna_vrednost':ukupna_vrednost}
+        spisak.append(artikli)
+
+with open('rezultat_2a.txt', 'w') as fajl:
+    for item in sorted(spisak, key = lambda artikli:artikli['ukupna_vrednost']):
+        fajl.write(f"{item['artikal']}, {item['ukupna_vrednost']}\n")
+# ukupna vrednost nije bila obavezna da se štampa
+```
+</details>
+
