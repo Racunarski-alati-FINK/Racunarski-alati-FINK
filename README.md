@@ -40,3 +40,6 @@
 
 ## Табела са резултатима
 * [Tabela sa bodovima, 2023/2024](https://docs.google.com/spreadsheets/d/1YRPxx46TEhW5JKNKg-dU9YemG2HpLTusSQx2yiHggd8/edit?usp=sharing)
+
+ ## Zadaci sa prethodnih kolokvijuma i ispita se mogu naći na [linku](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/ispitni_rokovi.md)
+
