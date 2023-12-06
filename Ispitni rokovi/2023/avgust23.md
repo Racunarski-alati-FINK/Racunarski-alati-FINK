@@ -81,6 +81,7 @@ Napisati funkciju koja uzima niz realnih brojeva A i sve pozitivne neparne član
 # glavni program:
 print(f"Broj izmenjenih članova je {funkcija([1, -2, 3, 4, -5])}")
 ```
+</details>
 
 ## Drugi zadatak
 Videti [drugi zadatak](#drugi-zadatak) grupe 1.
