@@ -1,4 +1,5 @@
-# Predmet: Računarski alati na Fakultetu inženjerskih nauka Univerziteta u Kragujevcu
+# Predmet: Računarski alati 
+[Fakultet inženjerskih nauka Univerziteta u Kragujevcu](http://fin.kg.ac.rs/sr/)
 ## Studijski programi:
   * Mašinsko inženjerstvo (BM1300)  
   * Urbano inženjerstvo (BUI1300)  
