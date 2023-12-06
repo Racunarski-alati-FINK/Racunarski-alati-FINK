@@ -631,7 +631,7 @@ with open('kupovina_recnici.txt', 'w') as fajl:
 Funkcija preuzima kvadratnu celobrojnu matricu.  
 Od negativnih članova glavne dijagonale formira novi niz.  
 Glavnom programu funkcija vraca broj članova i sumu novog niza.  
-_Napomena: Pri racunanju duzine i sume novog niza ne koristiti sum i len._
+_Napomena: Pri racunanju duzine i sume novog niza ne koristiti funkciju sum._
 
 <details markdown='block'>
 <summary>Rešenje</summary>
@@ -697,7 +697,7 @@ with open('izlaz5a.txt', 'w') as fajl:
 # Grupa 5b
 ## Prvi zadatak
 Funkcija ucita celobrojni niz, i sve clanove koji su negativni  
-zameni srednjom vrednoscu clanova niza. Srednju vrednost racunati bez koriscenja ugradjenjih funkcija sum i len.  
+zameni srednjom vrednoscu clanova niza. Srednju vrednost racunati bez koriscenja ugradjene funkcije sum.  
 Funkcija vraca glavnom programu par (srednja_vrednost, niz)   
 
     Primer: niz = [1, -5, 6, 3, -1, 7, -1]
