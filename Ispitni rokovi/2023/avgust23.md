@@ -13,6 +13,7 @@ Napisati funkciju koja uzima niz realnih brojeva A i sve negativne parne članov
 <summary>Rešenje</summary>
 
 ```python
+def funkcija(A):
     broj = 0
     print(f"Polazni niz je: {A}")
     for i in range(len(A)):
@@ -69,6 +70,7 @@ Napisati funkciju koja uzima niz realnih brojeva A i sve pozitivne neparne član
 <summary>Rešenje</summary>
 
 ```python
+def funkcija(A):
     broj = 0
     print(f"Polazni niz je: {A}")
     for i in range(len(A)):
