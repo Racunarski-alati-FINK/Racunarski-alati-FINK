@@ -17,7 +17,7 @@
 * [Avgust](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/avgust23.md)
 * [Septembar](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/septembar23.md)
 * [Oktobar](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/oktobar23.md)
-* [Oktobar 2](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/oktobar223.md) 
+* [Oktobar 2](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/oktobar23.md) 
 </details>
 
 <details markdown='block'>
