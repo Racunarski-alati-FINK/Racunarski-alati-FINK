@@ -28,7 +28,7 @@ print(funkcija([[2, -4, 3], [3, -2, 1], [-8, 5, 2]]))
 ## Drugi zadatak
 Napisati program koji otvara fajl  [rezultati_1a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/rezultati_1a.txt) u kome svaka linija sadrži ime studenta, poene na prvom i drugom kolokvijumu u formatu:
 
-        ime,poeni1,poen2
+        ime,poeni1,poeni2
 	
 Program čita fajl i kreira fajlove položili.txt i nisu_polozili.txt u kojima se u abecednom redu ispisuju imena studenata. Student je položio ako je suma poena > 51. 
 Format:  
