@@ -55,5 +55,34 @@ Poslovna primena računara i Internet, Obrada teksta, Tabelarni račun, Internet
   
 </details>
 
+## Nastava
+
+nedelja|   predavanja  |     vežbe       
+:----: | ------------- | ---------|
+  1\.  | [I]           | [01][v01]|
+  2\.  | [II]          | [02][v02]|     
+  3\.  | [III]         | [03][v03]|
+  4\.  | [IV]          | [04][v04]|
+  5\.  | [V]           | [05][v05]|
+  6\.  | [VI]          | [06][v06]|
+  7\.  | [VII]         | [07][v07]|
+  8\.  | [VIII]        | [08][v08]|
+  9\.  | [IX][pIX]     | [09][v09]|
+ 10\.  | [X][pX]       | [10][v10]|
+ 11\.  | [XI]          | [11][v11]|
+ 12\.  | [XII]         | [12][v12]|
+ 13\.  | [XIII]        | [13][v13]|
+ 14\.  | [XIV]         | [14][v14]|
+ 15\.  | [XV]          | [15][v15]|
+
+
+ 
+
+ [pIX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/fajlovi.md
+ [pX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/map_filter_funkcije.md 
+ 
+ [v09]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe09.py  
+ [v10]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe10.py 
+
 ## Zadaci sa prethodnih kolokvijuma i ispita se mogu naći na [linku](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/ispitni_rokovi.md)
 
