@@ -41,7 +41,7 @@ Format:
 ```python
 polozili = []
 nisu_polozili = []
-with open('ulaz1a.txt') as fajl:
+with open('rezultati_1a.txt') as fajl:
 	for linija in fajl:
 	    ime, poeni1, poeni2 = linija.rstrip().split(',')
          poeni = int(poeni1) + int(poeni2)
