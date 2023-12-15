@@ -64,6 +64,7 @@ nedelja|   predavanja  |     vežbe
 
  [pIX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/fajlovi.md
  [pX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/map_filter_funkcije.md 
+ [pXI]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/zadaci11.md
  
  [v09]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe09.py  
  [v10]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe10.py 
