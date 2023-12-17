@@ -194,10 +194,10 @@ print(maksimum_matrice(A))
 ```
 
 ## Jedanaesti primer
-Funkcija vraća vrednsot (X1 + X2 + X3 + ... + Xm) - (Y1 * Y2 * Y3 * ... * Ym)
+Funkcija vraća vrednsot (${\bf{x}}_1$ + ${\bf{x}}_2$ + ${\bf{x}}_3$ + ... + ${\bf{x}}_m$) - (Y1 * Y2 * Y3 * ... * Ym)
     gde su X i Y članovi neparnih odnosno parnih kolona matrice koja se preuzima iz glavnog programa
     
-    primer matrice:
+primer matrice:
     
    | X1 Y1 X4 Y4 X7 |   
    | X2 Y2 X5 Y5 X8 |   
