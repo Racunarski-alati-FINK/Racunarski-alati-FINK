@@ -53,5 +53,6 @@ def napravi_izvestaj(ime_fajla):
 
 # poziv funkcije u glavnom programu
 napravi_izvestaj('vreme.csv')
+```
 
 [vreme]: /vreme.csv
