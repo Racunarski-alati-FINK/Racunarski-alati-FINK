@@ -13,7 +13,7 @@ def sumiranje(niz):
         suma += niz[i]
     """
     print("Suma niza {} je {}.".format(niz,suma))   # ako pozivamo funkciju, bez return, štampamo rezultat u funkciji
-
+# glavni program:
 sumiranje([1,2,3,4,5,6])                            # pozivanje bez return
 ```
 ## Drugi primer
@@ -30,7 +30,7 @@ def sumiranje(niz):
         suma += niz[i]
     """
     return suma
-
+#glavni program:
 print(sumiranje([5,6,7,8,9,10]))                    # pozivanje ako koristimo return
 ```
 
@@ -46,7 +46,7 @@ def unesi_niz():
         niz.append(float(input(f"Uneti a[{i}] = "))) # dodavanje elementa (float) na kraj petlje sa tastature
     print(f"Uneli ste niz {niz}.")
     return niz
-
+# glavni program:
 a = unesi_niz()                                    # pozivanje funkcije i unošenje niza a
 ```
 Ukoliko hoćemo uneti niz da sumiramo prethodnom funkcijom za sumiranje to radimo na sledeći način:
@@ -55,7 +55,7 @@ Ukoliko hoćemo uneti niz da sumiramo prethodnom funkcijom za sumiranje to radim
 print(sumiranje(a))                                # sabiranje niza unetog funkcijom unesi_niz()
 ```
 
-## Treći primer
+## Četvrti primer
 Funkcija koja korisniku omogućava da unese matricu sa tastature
 
 ```python
@@ -71,10 +71,11 @@ def unesi_matricu():
         matrica.append(red)                         # unošenje vrste u matricu
     print("Uneli ste matricu: ")
     for red in matrica: print(red)                  # štampanje matrice vrsta po vrsta
+#glavni program:
 A = unesi_matricu()                                # pozivanje funkcije i unošenje matrice A
 ```
 
-## Četvrti primer
+## Peti primer
 Funkcija koja korisniku omogućava da prebroji parne članove niza. Glavnom programu vraća broj izbrojanih članova.
 
 ```python
@@ -101,7 +102,7 @@ Takođe, možemo funkciju da pozovemo i bez unošenja niza sa tasature, direktni
 ```python
 print(prebroj_parne([1,2,3,4,5,6,7,8,9,10]))
 ```
-## Peti primer
+## Šesti primer
 Funkcija koja u celobrojnom nizu proizvoljne duzine neparnim brojevima dodeljuje vrednost 0 (nula). Glavnom programu vraća procenat od ukupnog broja članova
 koji je različit od nule.
 
@@ -121,7 +122,7 @@ def unuli_neparne(niz):
 print(unuli_neparne([1,2,3,4,5,6]))
 ```
 
-## Šesti primer
+## Sedmi primer
 Funkcija izračunava srednju vrednost niza. Glavnom programu vraća dobijenu srednju vrednost:
 
 ```python
@@ -134,7 +135,7 @@ def srednja_vrednost_niza(niz):
         brojac += 1
     return suma/brojac
 ```
-### Sedmi primer
+### Osmi primer
 Funkcija koja vrednostima niza koje su manje od srednje vrednosti dodeljuje vrednost nula 
 _Napomena: funkcija podrazumeva izračunavanje srednje vrednosti funkcijom iz prethodnog primera_
 
@@ -154,7 +155,7 @@ def unuli_manje_od_srvr(niz):
 #glavni program
 print(unuli_manje_od_srvr([1,2,3,4,5,6]))
 ```
-## Osmi primer
+## Deveti primer
 Funkcija koja preuzima matricu i transponuje je, a glavnom programu vraća transponovanu matricu.
 
 ```python
@@ -176,7 +177,7 @@ AT = transponuj_matricu(A)
 for red in AT: print(red) # štampanje transponovane matrice red po red
 ```
 
-## Deveti primer
+## Deseti primer
 Funkcija koja pronalazi maksimalni član matrice i prosleđuje ga glavnom programu
 
 ```python
@@ -192,7 +193,7 @@ def maksimum_matrice(matrica):
 print(maksimum_matrice(A))
 ```
 
-## Deseti primer
+## Jedanaesti primer
 Funkcija vraća vrednsot (X1 + X2 + X3 + ... + Xm) - (Y1 * Y2 * Y3 * ... * Ym)
     gde su X i Y članovi neparnih odnosno parnih kolona matrice koja se preuzima iz glavnog programa
     
