@@ -66,8 +66,8 @@ nedelja|   predavanja  |     vežbe
  [pX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/map_filter_funkcije.md 
  [pXI]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/zadaci11.md
  
- [v09]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe09.py  
- [v10]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe10.py 
+ [v09]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe09.md  
+ [v10]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe10.md 
 
 ## Tabela sa rezultatima
 
