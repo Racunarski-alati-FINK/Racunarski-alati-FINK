@@ -58,11 +58,11 @@ Izvršavanje programa:
 
 ## Kompajlirani i interpretirani jezici
 
-![Dijagram interpretirani i kompajliranih jezika](interpretirani_kompajlirani.png)
+![Dijagram interpretirani i kompajliranih jezika](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/assets/152398242/8ce86a37-3d44-4de1-b078-825592315b5d)
 
 ## Interpretirani (skript) jezici
 
-![Dijagram interpretiranog jezika](interpretirani_jezici.png)
+![Dijagram interpretiranog jezika](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/assets/152398242/45e9b195-5f29-4cbe-adf1-61a5963f668f)
 
 ## Prvi program u Python
 
