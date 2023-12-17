@@ -199,11 +199,11 @@ Funkcija vraća vrednsot (X1 + X2 + X3 + ... + Xm) - (Y1 * Y2 * Y3 * ... * Ym)
     
     primer matrice:
     
-   | X1 Y1 X4 Y4 X7 |
-   | X2 Y2 X5 Y5 X8 |
-   | X3 Y3 X6 Y6 X9 |
+   | X1 Y1 X4 Y4 X7 |   
+   | X2 Y2 X5 Y5 X8 |   
+   | X3 Y3 X6 Y6 X9 |   
 
-   rezultat = (X1+X2+X3+X4+X5+X6+X7+X8+X9) - (Y1*Y2*Y3*Y4*Y5*Y6)
+   rezultat = (X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8 + X9) - (Y1 * Y2 * Y3 * Y4 * Y5 * Y6)
 
 ```python
 def sumaX_proizvodY(matrica):
