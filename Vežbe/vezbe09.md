@@ -227,7 +227,7 @@ def sumaX_proizvodY(matrica):
             else:
                 proizvodY *= matrica[i][j]
     return sumaX - proizvodY
-
+# glavni program:
 print(sumaX_proizvodY([[1,2,3],[1,2,3]]))
 ```
 
