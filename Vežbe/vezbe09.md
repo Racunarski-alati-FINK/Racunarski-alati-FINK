@@ -194,7 +194,7 @@ print(maksimum_matrice(A))
 ```
 
 ## Jedanaesti primer
-Funkcija vraća vrednsot  (${{X}_1$ + f{X}_2$ + f{X}_3$ + ... + f{X}}_m$)- (${{Y}_1 \cdot {Y}_2 \cdot {Y}_3 \cdot  ...  \cdot {Y}}_m$)
+Funkcija vraća vrednost  $({{X}_1 + {X}_2 + {X}_3 + ... + {X}}_m)$- $({{Y}_1 \cdot {Y}_2 \cdot {Y}_3 \cdot  \ldots  \cdot {Y}}_m$)
     gde su X i Y članovi neparnih odnosno parnih kolona matrice koja se preuzima iz glavnog programa
     
 primer matrice:
