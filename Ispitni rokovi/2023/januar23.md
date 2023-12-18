@@ -153,17 +153,17 @@ print(funkcija([1, 2, -3, 4, -5])
 Napisati program koji otvara fajl [raspored.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/raspored.txt) koji sadrži dnevni raspored filmova u bioskopu u formatu:
 
     naziv filma,vreme početka, dužina trajanja
-    Avatar 2, 17:45, 218
+    Avatar 2,17:45,218
 
-U izlazni fajl štampati spisak filmova koji se završavaju pre 22:00.
+U izlazni fajl štampati spisak filmova koji se završavaju posle 22:00.
 
 Primer:
 
     raspored.txt
 
-    Avatar 2, 17:45, 218
-    Kum, 18:00, 175
-    Hari Poter i kamen mudrosti, 20:00, 152
+    Avatar 2,17:45,218
+    Kum,18:00,175
+    Hari Poter i kamen mudrosti,20:00,152
     rezultat.txt
     Hari Poter i kamen mudrosti
 
