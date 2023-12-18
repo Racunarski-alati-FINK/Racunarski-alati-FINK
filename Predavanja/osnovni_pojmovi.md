@@ -44,10 +44,10 @@ Izračunati: O, P
 
 Algoritam:
 
-1. Ulazne veličine: r, $\pi$
-2. Izračunati: O = 2r$\pi$
-3. Izračunati: P = $r^2$$\pi$
-4. Izlazne veličine: O, P
+1. Ulazne veličine: r, $\pi$  
+2. Izračunati: O = 2r $\pi$  
+3. Izračunati: P = $r^2$ $\pi$  
+4. Izlazne veličine: O, P 
 
 Izvršavanje programa:
 
