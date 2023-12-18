@@ -77,7 +77,7 @@ nacrtaj_kvadrat()
 
 Napisati funkciju koja uzima listu koeficijenata polinoma $a$ i decimalni broj $x$. Funkcija računa vrednost polinoma:
 
-$$p(x) = a_0 + a_1*x + a_2*x^2 + .... a_n*x^n$$
+$$p(x)=a_0 + a_1 \cdot x + a_2 \cdot x^2 + \ldots + a_n \cdot x^n$$    
 
 ```python
 def polinom(koeficijenti, x):
@@ -92,9 +92,12 @@ polinom([1, 2, 3, 4], 2)
 ## Primer 5
 
 Napisati funkciju koja uzima ceo prirodan broj i proverava da li je broj Hemingov broj. Prirodan broj je Hemingov ako su jedini njegovi prosti činioci 2, 3 ili 5.
-$$ 8 = 2 * 2 * 2 -> jeste $$
-$$ 9 = 3 *3 -> jeste $$
-$$ 105 = 3 * 5 * 7 -> nije$$
+
+$$ 8 = 2 \cdot 2 \cdot 2  -> jeste $$
+
+$$ 9 = 3 \cdot 3  -> jeste $$
+
+$$ 105 = 3 \cdot 5 \cdot 7  -> nije $$  
 
 ```python
  def hemingov_broj(broj):
@@ -195,7 +198,7 @@ tabelarna_funkcija(0.3, -4)
 
 ## Primer 9
 
-Napisati funkciju koja uzima dva decimalna broja i tabelarno prikazuje vrednost funkcije $y = -a*x^3 + bx^2 + 2$ sve dok je vrednost funkcije veća od nule. Vrednost $x$ se menja sa korakom 0.1 u svakoj iteraciji $x = 0.1, 0.2, ...$.
+Napisati funkciju koja uzima dva decimalna broja i tabelarno prikazuje vrednost funkcije $y = -a*x^3 + bx^2 + 2$ sve dok je vrednost funkcije veća od nule. Vrednost $x$ se menja sa korakom 0.1 u svakoj iteraciji $x = 0.1, 0.2,...$
 
 ```python
 def tabelarna_funkcija(a, b):
