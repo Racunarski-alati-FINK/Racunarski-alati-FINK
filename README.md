@@ -44,7 +44,7 @@ Poslovna primena računara i Internet, Obrada teksta, Tabelarni račun, Internet
 nedelja|   predavanja  |     vežbe       
 :----: | ------------- | ---------|
   1\.  | [I][pI]       | [01][v01]|
-  2\.  | [II]          | [02][v02]|     
+  2\.  | [II][pII]          | [02][v02]|     
   3\.  | [III]         | [03][v03]|
   4\.  | [IV]          | [04][v04]|
   5\.  | [V]           | [05][v05]|
@@ -62,6 +62,7 @@ nedelja|   predavanja  |     vežbe
 
  
  [pI]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/osnovni_pojmovi.md
+ [pII]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/linijski_razgranati_programi.md
  [pIX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/fajlovi.md
  [pX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/map_filter_funkcije.md 
  [pXI]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/zadaci11.md
