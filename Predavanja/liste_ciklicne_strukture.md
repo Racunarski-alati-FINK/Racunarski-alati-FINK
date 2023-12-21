@@ -232,7 +232,7 @@ for brojac in range(krajnji indeks):
 
 Šematsko objašnjenje for petlje prikazano je na slici ispod.
 
-![For petlja](for_petlja.png)
+![For petlja](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/assets/152398242/3f682617-a159-4e13-82ee-01ad7bba4b39)
 
 ### Formulisanje for petlje
 
@@ -290,7 +290,7 @@ while brojac < 10:
     brojac = brojac + 1     
 ```
 
-![While petlja](while_petlja.png)
+![While_petlja](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/assets/152398242/96cfe586-f504-46f7-9dee-10c087187811)
 
 **Kod while petlji treba biti oprezan – mogu biti beskonačne!!!**
 
