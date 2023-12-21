@@ -45,10 +45,10 @@ nedelja|   predavanja  |     vežbe
 :----: | ------------- | ---------|
   1\.  | [I][pI]       | [01][v01]|
   2\.  | [II][pII]     | [02][v02]|     
-  3\.  | [III]         | [03][v03]|
-  4\.  | [IV]          | [04][v04]|
-  5\.  | [V]           | [05][v05]|
-  6\.  | [VI]          | [06][v06]|
+  3\.  | [III][pIII]   | [03][v03]|
+  4\.  | [IV][pIV]     | [04][v04]|
+  5\.  | [V][pV]       | [05][v05]|
+  6\.  | [VI][pVI]     | [06][v06]|
   7\.  | [VII]         | [07][v07]|
   8\.  | [VIII]        | [08][v08]|
   9\.  | [IX][pIX]     | [09][v09]|
@@ -63,6 +63,11 @@ nedelja|   predavanja  |     vežbe
  
  [pI]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/osnovni_pojmovi.md  
  [pII]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/linijski_razgranati_programi.md  
+ [pIII]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/liste_ciklicne_strukture.md
+ [pIV]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/break_continue_napredno_liste.md 
+ [pV]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/torke_skupovi_recnici.md
+ [pVI]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/funkcije.md 
+ [pVII]: 
  [pIX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/fajlovi.md  
  [pX]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/map_filter_funkcije.md   
  [pXI]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Predavanja/zadaci11.md  
