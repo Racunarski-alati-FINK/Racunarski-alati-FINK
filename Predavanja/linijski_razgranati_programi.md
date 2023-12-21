@@ -4,7 +4,7 @@
 
 Kod linijskih programa sve komande (naredbe) se izvršavaju jedna za drugom. Primer linijskog programa dat je na slici ispod.
 
-![Definicija i primer linijskog programa](linijski_definicija.png)
+![Definicija i primer linijskog programa](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/assets/152398242/08774075-819e-4f89-807e-1d71686468f9)
 
 Primer linijskog programa:
 
@@ -22,7 +22,7 @@ print('Zbir je '+ str(zbir))
 
 Grafički prikaz naredbe if u programu prikazan je na slici dole.
 
-![Grafički prikaz naredbe if](if_naredba.png)
+![Grafički prikaz naredbe if](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/assets/152398242/79278f05-469d-4bb3-8b69-ce4f203c31bb)
 
 ```python
 if uslov:
@@ -38,7 +38,7 @@ if broj > 0:
 
 Grafički prikaz naredbe if-else u programu prikazan je na slici dole.
 
-![Grafički prikaz naredbe if-else](if_else_naredba.png)
+![Grafički prikaz naredbe if-else](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/assets/152398242/183f573d-52f9-4d40-b5ec-24d998278348)
 
 ```python
 if uslov:
@@ -58,7 +58,7 @@ else:
 
 Grafički prikaz naredbe if-else u programu prikazan je na slici dole.
 
-![Grafički prikaz naredbe if-else](if_elif_else_naredba.png)
+![Grafički prikaz naredbe if-elif-else](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/assets/152398242/bcf901b9-8826-4746-a4d8-f564d926b90e)
 
 ```python
 if uslov:
