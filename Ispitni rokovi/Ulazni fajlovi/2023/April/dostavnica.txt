@@ -1,0 +1,3 @@
+Reno Twingo,KG111HH,55,12
+Fiat Panda,KG222GG,30,5
+Fiat seicento,KG333AA,40,13
