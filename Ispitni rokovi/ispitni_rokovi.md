@@ -11,9 +11,9 @@
   
 * [Januar](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/januar23.md)
 * [Februar](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/februar23.md)
-* [April]()
+* [April](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/april23.md)
 * [Jun]()  
-* [Jul]()  
+* [Jul](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/jul23.md)  
 * [Avgust](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/avgust23.md)
 * [Septembar](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/septembar23.md)
 * [Oktobar](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/2023/oktobar23.md)
