@@ -1,0 +1,10 @@
+Prasak za veš,1,2999
+Meso,2,999
+Jaja,20,27
+Mleko,2,159
+Jogurt,1,179
+Čokolada,2,199
+Pivo,10,99
+Vino,2,1299
+Sir,1,1399
+Supa,3,119
