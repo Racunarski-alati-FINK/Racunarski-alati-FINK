@@ -28,7 +28,7 @@ funkcija([5, 4, 9, -11 , 13, 19, 2, 6, -7])
 </details>
 
 ## Drugi zadatak
-Napisati program koji otvara fajl spisak.txt u kome svaka linija sadrži naziv proizvoda, količinu i cenu u formatu:
+Napisati program koji otvara fajl [spisak.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Jul/spisak.txt) u kome svaka linija sadrži naziv proizvoda, količinu i cenu u formatu:
 
     namirnica, kolicina, cena
 
