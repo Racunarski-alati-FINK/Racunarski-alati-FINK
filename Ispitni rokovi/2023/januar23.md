@@ -16,19 +16,15 @@ primer:
 
 ```python
 def funkcija(A,B):
-	C = []
-	for i in range(len(A)):
+    C = []
+    for i in range(len(A)):
         C.append(A[i]+B[i])
-
     suma = 0
-
     for i in range(len(C)):
         suma += C[i]
     srednja_vrednost = suma/len(C)
     # a može i srednja_vrednost = sum(C)/len(C)
-	
     return srednja_vrednost
-
 # poziv glavnog programa
 print(funkcija([1, 2, 3, 4, 5], [-1, -2, -3, -4, 5]))
 ```
