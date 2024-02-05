@@ -3,7 +3,8 @@
 ## Studijski programi:
   * Mašinsko inženjerstvo (BM1300)  
   * Urbano inženjerstvo (BUI1300)  
-  * Inženjerstvo zaštite životne sredine (IZŽS1300)  
+  * Inženjerstvo zaštite životne sredine (IZŽS1300)
+  * Vojnoindustrijsko inženjerstvo (BVI1300)
 
 ## Cilj predmeta
 Ovladavanje osnovama računarskih alata u vezi poslovne primene računara (Word , Excel), programskih jezika FORTRAN i Python i inženjerskih računarskih alata.
@@ -26,9 +27,12 @@ Poslovna primena računara i Internet, Obrada teksta, Tabelarni račun, Internet
 
 
 ## Predavači:
-* [Dr Grujović Nenad](http://fin.kg.ac.rs/sr/zaposleni/nastavnici/97-zaposleni/nastavnici/kat-prim-meh-aut-upr/601-nenad-grujovic), redovni profesor, gruja@kg.ac.rs  
+* [Dr Grujović Nenad](http://fin.kg.ac.rs/sr/zaposleni/nastavnici/97-zaposleni/nastavnici/kat-prim-meh-aut-upr/601-nenad-grujovic), redovni profesor, gruja@kg.ac.rs
+* [Dr Vesna Ranković](http://fin.kg.ac.rs/sr/zaposleni/nastavnici/97-zaposleni/nastavnici/kat-prim-meh-aut-upr/604-vesna-rankovic), redovni profesor, vesnar@kg.ac.rs
 * [Dr Milovanović P. Vladimir](http://fin.kg.ac.rs/sr/zaposleni/nastavnici/97-zaposleni/nastavnici/kat-prim-meh-aut-upr/606-vladimir-milovanovic), vanredni profesor, vladicka@kg.ac.rs  
-* [Dr Slavković Vukašin](http://fin.kg.ac.rs/sr/zaposleni/nastavnici/97-zaposleni/nastavnici/kat-prim-meh-aut-upr/608-vukasin-slavkovic), docent, vukasinsl@gmail.com   
+* [Dr Slavković Vukašin](http://fin.kg.ac.rs/sr/zaposleni/nastavnici/97-zaposleni/nastavnici/kat-prim-meh-aut-upr/608-vukasin-slavkovic), docent, vukasinsl@gmail.com
+* [Dr Tijana Geroski](http://fin.kg.ac.rs/sr/zaposleni/nastavnici/97-zaposleni/nastavnici/kat-prim-meh-aut-upr/607-tijana-geroski), docent, tijanas@kg.ac.rs
+    
 
 ### Asistenti saradnici:
 * [Milenković Strahinja](http://fin.kg.ac.rs/sr/zaposleni/istrazivaci/1037-strahinja-milenkovic), mast.inž.maš. strahinja.milenkovic@fink.rs  
