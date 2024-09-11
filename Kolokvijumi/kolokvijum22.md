@@ -734,6 +734,33 @@ print(funkcija([1, -5, 6, 3, -1, 7, -1]))
 ```
 </details>
 
+<details markdown='block'>
+<summary>Rešenje bez funkcije len() </summary>
+	
+```python
+def funkcija(niz):
+    srednja_vrednost = 0
+    suma = 0
+    brojac = 0
+
+    for i in range(len(niz)):
+        suma += niz[i]
+        brojac += 1
+
+    srednja_vrednost = suma/brojac
+
+    for i in range(brojac):
+        if niz[i] < 0:
+            niz[i] = srednja_vrednost
+
+    return srednja_vrednost, niz
+
+#glavni program
+
+print(funkcija([1, -5, 6, 3, -1, 7, -1]))
+
+```
+</details>
 
 ## Drugi zadatak
 Napisati progam koji otvara fajl [glasovi_5b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/glasovi_5b.txt).  
