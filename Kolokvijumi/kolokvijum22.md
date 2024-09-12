@@ -711,7 +711,6 @@ Funkcija vraca glavnom programu par (srednja_vrednost, niz)
 	
 ```python
 def funkcija(niz):
-    srednja_vrednost = 0
     suma = 0
     brojac = 0
 
@@ -743,8 +742,8 @@ def funkcija(niz):
     suma = 0
     brojac = 0
 
-    for i in range(len(niz)):
-        suma += niz[i]
+    for clan in niz:
+        suma += clan
         brojac += 1
 
     srednja_vrednost = suma/brojac
