@@ -790,17 +790,19 @@ with open('glasovi_5b.txt', 'r') as fajl:
     for linija in fajl:
         ime, smer, glasovi_mi, glasovi_ui, glasovi_rtsi = linija.rstrip().split(',')
         glasovi = int(glasovi_mi) + int(glasovi_ui) + int(glasovi_rtsi)
-        kandidat = {'ime':ime, 'smer':smer, 'glasovi':glasovi}
-
+        kandidat = {'ime': ime, 'smer': smer, 'glasovi': glasovi}
         kandidati.append(kandidat)
 
-i = 0
-with open('izlaz5b.txt', 'w') as fajl:
-    for kandidat in sorted(kandidati, key=lambda kandidat:kandidat['glasovi'], reverse=True): 
+# Sortiranje kandidata po broju glasova opadajuće
+kandidati = sorted(kandidati, key=lambda kandidat: kandidat['glasovi'], reverse=True)
+
+# Upis rezultata u izlazni fajl
+with open('izlaz_5b.txt', 'w') as fajl:
+    i = 0
+    for kandidat in kandidati:
         i += 1
-        fajl.write(f'{i}, {kandidat["ime"]}, {kandidat["glasovi"]}\n')
-    fajl.write(f'\n')
-    fajl.write(f'Novi predsednik Studentskog parlamenta je {kandidati[0]["ime"]}.')
+        fajl.write(f'{i}, {kandidat["ime"]}, {kandidat["smer"]}, {kandidat["glasovi"]}\n') 
+    fajl.write(f'\nNovi predsednik Studentskog parlamenta je {kandidati[0]["ime"]}.\n')
 ```
 </details>
 
