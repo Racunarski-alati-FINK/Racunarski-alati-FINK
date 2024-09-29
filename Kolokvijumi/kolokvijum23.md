@@ -128,25 +128,6 @@ prevedi_u_sekunde(12345678)
 ```
 </details>
 
-## Prvi zadatak
-Napisati funkciju koja broj sekundi pretvara u dane, sate, minute i sekunde.
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-``` python
-def prevedi_u_sekunde(vreme):
-    dani = vreme // (24*3600)
-    sati = vreme // 3600 % 24
-    minuti = vreme // 60 % 60
-    sekunde = vreme % 60
-    print(f"{vreme} sekundi je jednako {dani} dana, {sati} sati, {minuti} minuta i {sekunde} sekundi.")
-
-#glavni program:
-prevedi_u_sekunde(12345678)
-```
-</details>
-
 ## Drugi zadatak
 Napisati funkciju koja preuzeti niz iz glavnog programa A (n) postavlja za glavnu dijagonalu matrice B (n x n) pri čemu su ostali članovi matrice nule. Glavni program ispisuje niz A i matricu B.
 
@@ -439,7 +420,6 @@ def funkcija(n):
 ```
 </details>
 ## Drugi zadatak
-
 Napisati funkciju koja uzima dva niza A(n) i B(m) gde niz A predstavlja uneti niz brojeva, dok niz B predstavlja uneti niz redosleda članova i formira novi niz C od članova niza A, a po indeksima iz niza B.
 
 	A = [4, 6, 1, 7]
@@ -517,40 +497,67 @@ with open('izlaz3a.txt', 'w') as fajl:
 ```
 </details>
 
-# Grupa 3b
+# Grupa 6
 ## Prvi zadatak
-Funkcija uzima celobrojni niz i ceo broj X.  
-Sortira niz u opadajućem poretku.  
-Zatim unuli sve parne brojeve koji su veći od X,
-a neparnim manjim od X  dodeli vrednost 1.
+Napisati funkciju koja štampa histogram iz date liste A pomoću zadatog simbola 
 
-	Primer: niz = [2, 6, -7, 0, 1, 5], x = 4  => [0, 5, 2, 1, 0, 1]  
-	Primer: niz = [5, 1, 8, -2, 7, -3, 10], x = 6 => [0, 0, 7, 1, 1, -2, 1]  
+	Primer:
+	histogram([2,3,6,5], '*'):
+	2: **
+ 	3: ***
+ 	6: ******
+ 	5: *****   
 
 <details markdown='block'>
 <summary>Rešenje</summary>
 	
 ```python
-def funkcija(niz, x):
-    print(niz)
-    for i in range(0, len(niz)-1):
-        for j in range(i+1, len(niz)):
-            if niz[i] < niz[j]:
-                niz[i], niz[j] = niz[j], niz[i]
-    for i in range(len(niz)):
-        if niz[i] % 2 == 0 and niz[i] > x:
-            niz[i] = 0
-        elif niz[i] % 2 != 0 and niz[i] < x:
-	return niz
-
-#pozivanje glavnog progam
-print(funkcija([2, 6, -7, 0, 1, 5], 4))
-print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
+def histogram(lista, simbol):
+    for i in lista:
+        print(f"{i}:", simbol*i)
+        
+# glavni program:        
+histogram([2,3,6,5], '*')
+histogram([2,3,6,5,4], '#')
 
 ```
 </details>
 
 ## Drugi zadatak
+Napisati funkciju koja crta „X“ unutar kvadratne matrice (nxn) pomocu slova X. Članovi u okolini „X“ su nule, dok je dimenzija n argument funkcije.
+
+	    [X, 0, X]
+	A = [0, X, 0]
+	    [X, 0, X]
+
+<details markdown='block'>
+<summary>Rešenje</summary>
+	
+```python
+def funkcija(n):
+    A=[]
+    for i in range(0,n):
+        red=[]
+        for j in range(0,n):
+            red.append(0)
+        A.append(red)
+    for i in range(0,n):
+        for j in range(0,n):
+            if i==j or i+j==n-1:
+                A[i][j]='X'
+            else:
+                A[i][j]=0
+    return A
+#glavni program:
+A = funkcija(3)
+print("Matrica:")
+for red in A:
+    print(red)
+
+```
+</details>
+
+## Тrеći zadatak
 Napisati program koji otvara fajl [tacke_3b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/tacke_3b.txt).  
 Svaka linija fajla predstavlja koordinate u formatu:  
 xkoord,ykoord  
@@ -595,42 +602,65 @@ with open('izlaz2b.txt', 'w') as fajl:
 ```
 </details>
 
-# Grupa 4a
+# Grupa 7
 ## Prvi zadatak
-Funkcija izračunava razliku između srednjih vrednosti elemenata niza A (n) i niza B (m).
+Napisati funkciju koja računa površinu geometrijskih oblika (krug, kvadrat, jednakostračni trougao). Argumenti funkcije su oblik i stranica, odnosno poluprečnik.
+	
+ 	primer:
+	dimenzija = 5, oblik = “krug” => P = 5 * 5 * 3.14 
+	dimenzija = 5, oblik = “kvadrat” => P = 5 * 5
+	dimenzija = 5, oblik = “jednakostranicni trougao” => P = 5 * 5 / 2
+
 <details markdown='block'>
 <summary>Rešenje</summary>
 	
 ```python
-def funkcija(A, B):
-	srednja_vred_A = 0
-    srednja_vred_B = 0
-    
-    suma_A = 0
-    suma_B = 0
+def povrsina_oblika(oblik, stranica):
+    povrsina = "Nije unet odgovarajuć oblik: krug, kvadrat ili trougao!"
+    if oblik == "krug":
+        povrsina = stranica **2 * 3.14
+    elif oblik == "kvadrat":
+        povrsina = stranica ** 2
+    elif oblik == "trougao":
+        povrsina = (stranica**2) * 3 **(1/2)/4
+    return povrsina
 
-    brojac_A = 0
-    brojac_B = 0
-
-    for i in range(len(A)):
-        brojac_A += 1
-        suma_A += A[i]
-
-    for i in range(len(B)):
-        brojac_B += 1
-        suma_B += B[i]
-
-    srednja_vred_A = suma_A / brojac_A
-    srednja_vred_B = suma_B / brojac_B
-
-    return srednja_vred_A-srednja_vred_B
-    
-#glavni program
-print(funkcija([2, -4, 3, 5, 9, 1], [3, -2, 0, 1]))
+#glavni program:
+print(povrsina_oblika("krug", 5))
+print(povrsina_oblika("kvadrat", 5))
+print(povrsina_oblika("trougao", 5))
+print(povrsina_oblika("pravougaonik", 5))
 ```
 </details>
 
-# Drugi zadatak
+## Drugi zadatak
+Napisati funkciju koja pronalazi najmanje članove po redovima kvadratne matrice A (nxn) i ispisuje ih u obliku niza B.
+	
+ 	primer:
+		[1, 0, 3]
+	A = [1, 2, 3]  => B = [0, 1, 1]
+    	[1, 2, 5]
+
+<details markdown='block'>
+<summary>Rešenje</summary>
+	
+```python
+def funkcija(A):
+    B=[]
+    for i in range(0,len(A)):
+        minbr=A[i][0]
+        for j in range(0,len(A)):
+            if A[i][j]<minbr:
+                minbr=A[i][j]
+        B.append(minbr)
+    return(B)
+
+#glavni program:
+print(funkcija([[1, 0, 3], [1, 2, 3], [1, 2, 5]]))
+```
+</details>
+
+# Treći zadatak
 Napisati program koji otvara fajl [rezultati_4a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/rezultati_4a.txt).   
 Svaka linija fajla sadrzi ime studenta i poene na ispitu u formatu:
 
