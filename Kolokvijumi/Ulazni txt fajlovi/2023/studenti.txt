@@ -1,0 +1,6 @@
+Janko Jankovic;Masinsko inzenjerstvo;41
+Filip Filipovic;Urbano inzenjerstvo;57
+Milos Milosevic;Vojnoindustrijsko inzenjerstvo;34
+Petar Petrovic;Masinsko inzenjerstvo;55
+Mitar Mitrovic;Inzenjerstvo zastite zivotne sredine;35
+Spasa Spasic;Masinsko inzenjerstvo;92
