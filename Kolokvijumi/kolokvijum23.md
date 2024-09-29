@@ -125,7 +125,7 @@ def prevedi_u_sekunde(vreme):
 
 #glavni program:
 prevedi_u_sekunde(12345678)
-
+```
 </details>
 
 ## Prvi zadatak
@@ -144,6 +144,7 @@ def prevedi_u_sekunde(vreme):
 
 #glavni program:
 prevedi_u_sekunde(12345678)
+```
 </details>
 
 ## Drugi zadatak
@@ -178,6 +179,7 @@ def funkcija(A):
 #glavni program
 
 print(funkcija([1,2,3,4]))
+```
 </details>
 
 ## Treći zadatak
