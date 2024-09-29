@@ -2,7 +2,8 @@
 <details markdown='block'>
 <summary>više</summary>
   
-* [2022/2023. godina](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/kolokvijum22.md)  
+* [2022/2023. godina](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/kolokvijum22.md)
+* [2023/2024. godina](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/kolokvijum23.md)  
 </details>
 
 ## Rešeni zadaci sa ispitnih rokova prethodnih godina
