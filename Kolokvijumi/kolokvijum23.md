@@ -184,6 +184,7 @@ print(funkcija([2, 2, 2, 3, 4, 5],3)) # rešenje je 1615
 print(funkcija([1, 2, 3],2))  # rešenje je 33
 ```
 </details>
+
 ## Drugi zadatak
 Napisati funkciju koja će za niz A dimenzije N da formira dva zasebna niza B i C i da izračuna razliku njihovih suma koja se ispisuje u glavnom programu. Niz B sadrži sve parne članove, dok niz C sadrži sve neparne članove niza A. Funkcija takođe ispisuje nizove B i C.
 
@@ -216,7 +217,6 @@ def funkcija(A):
 print(funkcija([1,5,2,7,4]))
 ```
 </details>
-
 
 ## Treći zadatak 
 Napisati program koji otvara fajl [raspored.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/raspored.txt) koji sadrži dnevni raspored filmova u bioskopu u formatu:
@@ -359,7 +359,6 @@ funkcija("studenti.txt", 50)
 </details>
 
 # Grupa 5
-
 ## Prvi zadatak
 Napisati funkciju koja uzima broj \(n\) koji predstavlja broj članova niza i računa vrednost niza prema formuli:
 
@@ -377,6 +376,7 @@ def funkcija(n):
 
 ```
 </details>
+
 ## Drugi zadatak
 Napisati funkciju koja uzima dva niza A(n) i B(m) gde niz A predstavlja uneti niz brojeva, dok niz B predstavlja uneti niz redosleda članova i formira novi niz C od članova niza A, a po indeksima iz niza B.
 
