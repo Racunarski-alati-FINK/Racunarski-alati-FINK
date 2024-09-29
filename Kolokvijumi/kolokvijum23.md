@@ -151,12 +151,12 @@ prevedi_u_sekunde(12345678)
 Napisati funkciju koja preuzeti niz iz glavnog programa A (n) postavlja za glavnu dijagonalu matrice B (n x n) pri čemu su ostali članovi matrice nule. Glavni program ispisuje niz A i matricu B.
 
 	primer:
-        A = [1, 2, 3, 4]
-        ------------
-        Matrica B:
-        [1, 0, 0, 0]
-        [0, 2, 0, 0]
-        [0, 0, 3, 0]
+	A = [1, 2, 3, 4]
+	------------
+	Matrica B:
+	[1, 0, 0, 0]
+	[0, 2, 0, 0]
+	[0, 0, 3, 0]
 	[0, 0, 0, 4]
 
 <details markdown='block'>
@@ -342,28 +342,28 @@ Napisati funkciju koja preuzeti niz iz glavnog programa A (n) postavlja za spore
 	primer
 	A = [1, 2, 3, 4, 5]
 
-    	[0, 0, 0, 0, 1]
-    	[0, 0, 0, 2, 0]
+		[0, 0, 0, 0, 1]
+		[0, 0, 0, 2, 0]
 	B = [0, 0, 3, 0, 0]
     	[0, 4, 0, 0, 0]
-	 	[5, 0, 0, 0, 0]
+		[5, 0, 0, 0, 0]
 
 <details markdown='block'>
 <summary>Rešenje</summary>
 
 ```python
 def funkcija(A):
-    B=[]
+	B=[]
 	N = len(A) 	#dužina niza A
-    for i in range (0,N):
-        red=[]
-        for j in range(0,N):
-            red.append(0)
-        B.append(red)
-    for i in range(0,N):
-        for j in range(0,N):
-            if i+j==N-1:
-                B[i][j]=A[i]
+	for i in range (0,N):
+		red=[]
+		for j in range(0,N):
+			red.append(0)
+		B.append(red)
+	for i in range(0,N):
+		for j in range(0,N):
+			if i+j==N-1:
+				B[i][j]=A[i]
     return(B)
  
 # glavni program:
@@ -423,6 +423,7 @@ with open('izlaz2b.txt', 'w') as fajl:
 
 ## Prvi zadatak
 Napisati funkciju koja uzima broj \(n\) koji predstavlja broj članova niza i računa vrednost niza prema formuli:
+
 p = 1 + 4/2 + 7/3 + 10/4 + 13/5 + …
 
 <details markdown='block'>
@@ -439,10 +440,11 @@ def funkcija(n):
 </details>
 ## Drugi zadatak
 
-Napisati funkciju koja uzima dva niza \( A \) (n) i \( B \) (m) gde niz \( A \) predstavlja uneti niz brojeva, dok niz \( B \) predstavlja uneti niz redosleda članova i formira novi niz \( C \) od članova niza \( A \), a po indeksima iz niza \( B \).
+Napisati funkciju koja uzima dva niza A(n) i B(m) gde niz A predstavlja uneti niz brojeva, dok niz B predstavlja uneti niz redosleda članova i formira novi niz C od članova niza A, a po indeksima iz niza B.
 
 	A = [4, 6, 1, 7]
- 	B= [0, 3, 2, 2, 3, 1, 0] 
+ 	B = [0, 3, 2, 2, 3, 1, 0]
+  	C = [A[0], A[3], A[2], A[2], A[3], A[1], A[0]]
   	C = [4, 7, 1, 1, 7, 6, 4]
 
 
