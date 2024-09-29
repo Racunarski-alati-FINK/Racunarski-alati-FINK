@@ -281,7 +281,8 @@ print(funkcija([2, 6, -7, 0, 1, 5], 4))
 print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
 ```
 </details>
-# Drugi zadatak
+
+## Drugi zadatak
 Napisati funkciju koja preuzeti niz iz glavnog programa A (n) postavlja za sporednu dijagonalu matrice B (nxn), pri čemu su ostali članovi matrice nule. Glavni program ispisuje niz A i matricu B.
 
 	primer:
@@ -318,7 +319,7 @@ for red in matrica:
 ```
 </details>
 
-# Treći zadatak
+## Treći zadatak
 Funkcija uzima fajl [studenti.txt]([https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/raspored.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2023/studenti.txt) i ukupan broj studenata.
 
 ime studenta;smer;poeni
@@ -401,7 +402,7 @@ print(C)
 ```
 </details>
 
-# Treći zadatak
+## Treći zadatak
 Napisati progam koji otvara fajl [glasovi_5b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/glasovi_5b.txt).  
 Fajl sadrzi spisak kandidata za predsednika Studentskog parlamenta  
 FINK u formatu:  
@@ -602,7 +603,7 @@ print(funkcija([[1, 0, 3], [1, 2, 3], [1, 2, 5]]))
 ```
 </details>
 
-# Treći zadatak
+## Treći zadatak
 Napisati program koji otvara fajl [nabavka.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Februar/nabavka.txt) koji sadrži spisak robe u formatu:
 
 	Naziv artikla, Cena po komadu, Broj komada
