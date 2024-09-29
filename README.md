@@ -35,7 +35,7 @@ Poslovna primena računara i Internet, Obrada teksta, Tabelarni račun, Internet
     
 
 ### Asistenti saradnici:
-* [Milenković Strahinja]([http://fin.kg.ac.rs/sr/zaposleni/istrazivaci/1037-strahinja-milenkovic](http://is.fink.rs/podaci/Strahinja_Milenkovic/191/cv_Strahinja_Milenkovic.html), mast.inž.maš. strahinja.milenkovic@fink.rs  
+* [Milenković Strahinja](http://is.fink.rs/podaci/Strahinja_Milenkovic/191/cv_Strahinja_Milenkovic.html), mast.inž.maš. strahinja.milenkovic@fink.rs  
 * [Nastić Filip](http://fin.kg.ac.rs/sr/zaposleni/istrazivaci/1661-filip-nastic), mast.inž.maš. filip.nastic@uni.kg.ac.rs  
 
 ## Online Python editori:
