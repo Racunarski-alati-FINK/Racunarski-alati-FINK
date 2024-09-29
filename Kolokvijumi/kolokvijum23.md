@@ -210,31 +210,27 @@ with open('reci.txt', 'w') as fajl:
 
 # Grupa 2a
 ## Prvi zadatak
-Funkcija uzima niz i vraca glavnom programu niz novi_niz.  
-- ako je broj clanova niza paran novi_niz sadrzi vrednosti:
-    [niz[0]+niz[-1], niz[1]+niz[-2], ..]  
-- ako je broj clanova neparan novi_niz sadrzi samo niz[n/2+1]  
+Funkcija uzima skup koeficijenata (Niz A, dimenzije n) i vrednost promenljive x i računa polinom: p(x) = a₀ + a₁x² + a₂x³ + a₃x⁴ + …
 
-	Primer: [3, 5, 77, 1, 2, 8, 3] => novi_niz = [1]    
-	Primer: [2, 2, 2, 3, 4, 5] => novi_niz = [7, 6, 5]
-
+	koeficijenti: [1, 2, 3] 
+  	x = 2
+   	p(x) = 1 + 2 × 2² + 3 × 2³ = 1 + 8 + 24 = 33
 <details markdown='block'>
 <summary>Rešenje</summary>
 	
 ```python
-def funkcija(niz):
-	novi_niz = []
-    print(len(niz)//2)
-    if len(niz) % 2 == 0:
-		for i in range(len(niz)//2):
-			novi_niz.append(niz[i] + niz[-(i+1)])
-	else:
-    	novi_niz.append(niz[len(niz)//2])
-	return novi_niz
+def funkcija(koeficijenti,x):
+	stepen = 2
+	polinom = koeficijenti[0]
+	for koeficijent in koeficijenti:
+		polinom = polinom + koeficijent * x ** stepen
+		stepen = stepen + 1
+	return polinom
 
-glavni program
-print(funkcija([3, 5, 77, 1, 2, 8, 3]))
-print(funkcija([2, 2, 2, 3, 4, 5]))
+#glavni program
+print(funkcija([3, 5, 77, 1, 2, 8, 3],2)) # rešenje je 522
+print(funkcija([2, 2, 2, 3, 4, 5],3)) # rešenje je 1615
+print(funkcija([1, 2, 3],2))  # rešenje je 33
 ```
 </details>
 
