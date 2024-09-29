@@ -320,7 +320,7 @@ print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
 # Drugi zadatak
 Napisati funkciju koja preuzeti niz iz glavnog programa A (n) postavlja za sporednu dijagonalu matrice B (nxn), pri čemu su ostali članovi matrice nule. Glavni program ispisuje niz A i matricu B.
 
-	primer
+	primer:
 	A = [1, 2, 3, 4, 5]
 
 		[0, 0, 0, 0, 1]
@@ -693,47 +693,57 @@ with open('rezultati_torke.txt', 'w') as fajl:
 ```
 </details>
 
-# Grupa 4b
+# Grupa 8
 ## Prvi zadatak
-Funkcija uzima celobrojni niz i ceo broj x.
-Funkcija racuna i glavnom programu vraća srednju vrednost članova niza koji su veći od broja x i sortira niz u rastući poredak.
-_Napomena: ne koristiti metode i funkcije za sortiranje._
+Napisati funkciju koja uzima skup koeficijenata (Niz A, dimenzije n) i vrednost promenljive x i računa polinom: 
+
+p(x) = a₀ + 3a₁x² + 5a₂x⁴ + 7a₃x⁶ + …
+
 <details markdown='block'>
 <summary>Rešenje</summary>
 	
 ```python
-def funkcija(niz, x):
-	srednja_vrednost = 0
-    suma = 0
-    brojac = 0
+def funkcija(A, x):
+    polinom = A[0]  # Prvi koeficijent a₀
+    for i in range(1, len(A)):
+        polinom += (2*i + 1) * A[i] * x**(2*i)
+    return polinom
 
-    for i in range(len(niz)):
-        if niz[i] > x:
-            suma += niz[i]
-            brojac += 1
-
-    srednja_vrednost = suma/brojac
-
-    
-    for i in range(0, len(niz)-1):
-        for j in range(i+1, len(niz)):
-            if niz[i] > niz[j]:
-                niz[i], niz[j] = niz[j], niz[i]
-
-#ovde je moguce koristiti i klasicnu zamenu mesta clanovima
-                privremena = niz[i]
-                niz[i] = niz[j]
-                niz[j] = privremena
-
-    return srednja_vrednost, niz
-
-
-#glavni program
-print(funkcija([5, 4, 9, -11, 13, 19, 2, 6, -7], 4))
+# glavni program:
+A = [1, 2, 3] 
+x = 2  
+print(funkcija(A, x))
 ```
 </details>
 
 ## Drugi zadatak
+Napisati funkciju koja pronalazi najveće članove po redovima kvadratne matrice A (nxn) i ispisuje ih u obliku niza B.
+	
+ 	primer:
+		[1, 0, 3]
+	A = [1, 2, 3]  => B = [3, 3, 5]
+    	[1, 2, 5]
+
+<details markdown='block'>
+<summary>Rešenje</summary>
+	
+```python
+def funkcija(A):
+    B=[]
+    for i in range(0,len(A)):
+        maxbr=A[i][0]
+        for j in range(0,len(A)):
+            if A[i][j]>maxbr:
+                maxbr=A[i][j]
+        B.append(maxbr)
+    return(B)
+
+#glavni program:
+print(funkcija([[1, 0, 3], [1, 2, 3], [1, 2, 5]]))
+```
+</details>
+
+## Treći zadatak
 Napisati program koji otvara program [kupovina_4b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/kupovina_4b.txt).  
 Svaka linija fajla sadrzi podatke od namirnici i kolicini za kupovinu:  
 
@@ -781,364 +791,4 @@ with open('kupovina_recnici.txt', 'w') as fajl:
         fajl.write(f"{proizvod['namirnica']} {proizvod['novac']
 ```
 </details>
-
-# Grupa 5a
-## Prvi zadatak
-Funkcija preuzima kvadratnu celobrojnu matricu.  
-Od negativnih članova glavne dijagonale formira novi niz.  
-Glavnom programu funkcija vraca broj članova i sumu novog niza.  
-_Napomena: Pri racunanju duzine i sume novog niza ne koristiti funkciju sum._
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-```python
-def funkcija(matrica):
-	suma = 0
-	broj_clanova = 0
-	novi_niz = []
-    for i in range(len(matrica)):
-        for j in range(len(matrica)):
-            if i == j and matrica[i][j] < 0:
-                novi_niz.append(matrica[i][j])
-    for i in range(len(novi_niz)):
-        broj_clanova += 1
-        suma += novi_niz[i] 
-    return suma, broj_clanova
-# glavni program
-print(funkcija([[6, 4, 1], [-5, -9, 0], [8, -2, -3]]))
-```
-</details>
-
-## Drugi zadatak
-Napisati program koji otvara fajl [koeficijenti_5a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/koeficijenti_5a.txt).  
-Svaka linija fajla predstavlja jedan koeficijent u kvadratnoj jednacini.  
-Koeficijente smestiti u listu koeficijenti.  
-
-Program u izlazni fajl resenje.txt stampa dve linije:  
-Koeficijenti a = {}, b = {} i c = {}  
-Resenja x1 = {} i x2 = {}.   
-
-Primer:
-
-	koeficijenti.txt
-	2
-	4
-	-3
-
-	resenje.txt
-	Koeficijenti a = 2, b = 4, c = -3
-	Resenja x1 = 0.58113 , x2 = -2.5811 
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-```python
-koeficijenti = []
-with open('koeficijenti_5a.txt', 'r') as fajl:
-    for linija in fajl:
-        koeficijenti.append(int(linija))
-
-a, b, c = koeficijenti
-
-x1 = (-b+((b**2 - 4*a*c)**0.5))/(2*a)
-x2 = (-b-((b**2 - 4*a*c)**0.5))/(2*a)
-
-with open('izlaz5a.txt', 'w') as fajl:
-    fajl.write(f"Koeficijenti a = {a}, b = {b} i c = {c}\n")
-    fajl.write(f"Resenja x1 = {x1} i x2 = {x2}.") 
-```
-</details>
-
-# Grupa 5b
-## Prvi zadatak
-Funkcija ucita celobrojni niz, i sve clanove koji su negativni  
-zameni srednjom vrednoscu clanova niza. Srednju vrednost racunati bez koriscenja ugradjene funkcije sum.  
-Funkcija vraca glavnom programu par (srednja_vrednost, niz)   
-
-    Primer: niz = [1, -5, 6, 3, -1, 7, -1]
-            suma = 10  
-            brojac = 7 (broj clanova)  
-            srednja_vrednost = 1.4285...
-
-            => (1.4285..., [1, 1.4285, 6, 3, 1.4285, 7, 1.4285])
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-```python
-def funkcija(niz):
-    suma = 0
-    brojac = 0
-
-    for i in range(len(niz)):
-        suma += niz[i]
-        brojac += 1
-
-    srednja_vrednost = suma/brojac
-
-    for i in range(len(niz)):
-        if niz[i] < 0:
-            niz[i] = srednja_vrednost
-
-    return srednja_vrednost, niz
-
-#glavni program
-
-print(funkcija([1, -5, 6, 3, -1, 7, -1]))
-
-```
-</details>
-
-<details markdown='block'>
-<summary>Rešenje bez funkcije len() </summary>
-	
-```python
-def funkcija(niz):
-    srednja_vrednost = 0
-    suma = 0
-    brojac = 0
-
-    for clan in niz:
-        suma += clan
-        brojac += 1
-
-    srednja_vrednost = suma/brojac
-
-    for i in range(brojac):
-        if niz[i] < 0:
-            niz[i] = srednja_vrednost
-
-    return srednja_vrednost, niz
-
-#glavni program
-
-print(funkcija([1, -5, 6, 3, -1, 7, -1]))
-
-```
-</details>
-
-## Drugi zadatak
-Napisati progam koji otvara fajl [glasovi_5b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/glasovi_5b.txt).  
-Fajl sadrzi spisak kandidata za predsednika Studentskog parlamenta  
-FINK u formatu:  
-
-	ime kandidata,smer koji studira,glasovi sa MI,glasovi sa UI i IZZS, glasovi RTSI
-
-U listu kandidati smestiti recnik za svakog kandidata  
- kandidat = {'ime':ime, 'smer':smer, 'glasovi':suma glasova sa svih smerova}  
-
-Program kreira izlazni fajl rezultati.txt u svaka linija ima format:  
-
-	redni broj (i+1), ime kandidata, smer, broj glasova
-
-Kandidati u izlaznom fajlu su sortirani po broju osvojenih glasova.  
-
-U poslednjoj liniji stampa se ime novog predsednika parlamenta:  
-
-	Novi predsednik Studentskog parlamenta je {ime}. 
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-```python
-kandidati = []
-with open('glasovi_5b.txt', 'r') as fajl:
-    for linija in fajl:
-        ime, smer, glasovi_mi, glasovi_ui, glasovi_rtsi = linija.rstrip().split(',')
-        glasovi = int(glasovi_mi) + int(glasovi_ui) + int(glasovi_rtsi)
-        kandidat = {'ime': ime, 'smer': smer, 'glasovi': glasovi}
-        kandidati.append(kandidat)
-
-# Sortiranje kandidata po broju glasova opadajuće
-kandidati = sorted(kandidati, key=lambda kandidat: kandidat['glasovi'], reverse=True)
-
-# Upis rezultata u izlazni fajl
-with open('izlaz_5b.txt', 'w') as fajl:
-    i = 0
-    for kandidat in kandidati:
-        i += 1
-        fajl.write(f'{i}, {kandidat["ime"]}, {kandidat["smer"]}, {kandidat["glasovi"]}\n') 
-    fajl.write(f'\nNovi predsednik Studentskog parlamenta je {kandidati[0]["ime"]}.\n')
-```
-</details>
-
-# Grupa 6a
-## Prvi zadatak
-Funkcija uzima niz celih brojeva i jedan ceo broj.
-Funkcija poredi clanove niz sa prosledjenim brojem. 
-Ukoliko je clan niza jednak broju indeks clana + 1 se 
-dodaje na promenljivu brojilac, a ako clan nije
-jednak broju njegov indeks + 1 se dodaje na promenljivu
-imenilac. Funkcija vraca glavnom programu kolicnik.
-
-Primer:
-
-    niz = [-5, 4, 5, 4, 2]
-    broj = 4
-
-    4 se nalazi na indeksima 1 i 3 => brojilac = (1+1) + (3+1) = 6
-    4 se ne nalazi na indeksima 0, 2, 4 => imenilac = (0+1) + (2+1) + (4+1) = 9
-
-    rezultat => 6/9 = 0.666666
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-```python
-def funkcija(niz, broj):
-    rezultat = 0
-    brojilac = 0
-    imenilac = 0
-
-    for i in range(len(niz)):
-        if niz[i] == broj:
-            brojilac += i + 1
-        else:
-            imenilac += i + 1
-    rezultat = brojilac / imenilac
-
-    return rezultat
-
-# glavni program
-print(funkcija([-5, 4, 5, 4, 2], 4))
-print(funkcija([-2, 4, 9, 3, 2, 3, 4, 6, 3], 3))
-print(funkcija([0, 6, 1, 0, 8, 0, 4, 0, 2], 0))
-print(funkcija([0, 1, 0, 1, 0, 0, 1, 1, 4], 1))
-print(funkcija([5, 4, 5, 4, 7, 5, 0], 5))
-print(funkcija([2, 8, 5, 4, 8, 6, 0, 8], 8))
-
-```
-</details>
-
-## Drugi zadatak
-Napisati program koji otvara fajl [rezultati_6a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/rezultati_6a.txt)  
-u kome svaka linija sadrzi ime studenta i poene  
-na prvom i drugom kolokvijumu u formatu:  
-
-	ime studenta,poeni prvi kolokvijum,poeni drugi kolokvijum
-
-Program čita fajl i kreira novi fajl u kome se  
-štampaju imena studenata i suma poena ukoliko  
-je student ostvario više od 30 poena na kolokvijumima.  
-Format izlaznog fajla spisak.txt:  
-
-	ime studenta,suma poena
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-```python
-studenti = []
-with open('rezultati_6a.txt', 'r') as fajl:
-    for linija in fajl:
-        ime, poeni1, poeni2 = linija.rstrip().split(',')
-        poeni = int(poeni1) + int(poeni2)
-        if poeni > 30:
-            student = {'ime':ime, 'poeni':int(poeni1)+int(poeni2)}
-            studenti.append(student)
-        
-with open('izlaz6b.txt', 'w') as fajl:
-    for student in studenti:
-        fajl.write(f"{student['ime']} {student['poeni']}\n")
-```
-</details>
-
-## Grupa 6b
-# Prvi zadatak
-Funkcija uzima kvadratnu matricu (n x n).  
-Glavnom programu vraća sumu ivičnih članova.  
-Ivični ćlanovi su ćlanovi prvog reda, prve kolone,  
-poslednjeg reda i poslednje kolone.  
-Izbeci sumiranje dvostrukih (clanova u uglovima matrice).
-
- Primer:
-
-        [ 3, 6,  1
-    A =   7, 3,  9      => suma = 3 + 6 + 1 + 7 + 9 -1 + 5 + 11 = 41
-         -1,  5, 11]
-
-       [ 1, 1, 1, 1,
-         1, 0, 0, 1,
-    A =  1, 0, 0, 1,     => suma = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 12 
-         1, 1, 1, 1]
-
-<details markdown='block'>
-<summary>Rešenje</summary>
-	
-```python
-def funkcija(matrica):
-    suma = 0 
-
-    for i in range(len(matrica)):
-        if i == 0:
-            suma += sum(matrica[i])
-        elif i == len(matrica)-1:
-            suma += sum(matrica[i])
-        else:
-            suma += matrica[i][0] + matrica[i][-1]
-        
-
-    return suma  
-
-# glavni program
-print(funkcija([[3, 6, 1], [7, 3, 9], [-1, 5, 11]]))
-print(funkcija([[1, 1, 1, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]]))
-
-```
-</details>
-
-## Drugi zadatak
-Napisati program koji otvara fajl [temperature_6b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/temperature_6b.txt).  
-Svaka linija fajla sadrzi podatke o temperaturama u nedelji u formatu:  
-
-    dan;temperatura  
- 
- Kreirati listu temperature koja sadrzi uredjene parove (dan, temperatura, osecaj).  
-Promenljiva osecaj ima vrednost:  
- -'hladno' ako je temperatura <= 10  
- -'toplo' ako je tmeperatura > 10  
-
-Program kreira izlazni fajl rezultat.txt gde je svaka linija formatirana:  
-
-    dan,temperatura,osecaj 
-
-<details markdown='block'>
-<summary>Rešenje korišćenjem uređenih parova </summary>
-	
-```python
-
-dani = []
-with open('ulaz3a.txt', 'r') as fajl:
-    for linija in fajl:
-        dan, temperatura = linija.rstrip().split(';')
-        if int(temperatura) <= 10:
-            osecaj = 'hladno'
-        else:
-            osecaj = 'toplo'
-        dani.append((dan, int(temperatura), osecaj))
-
-with open('izlaz3a.txt', 'w') as fajl:
-    for i in range(len(dani)):
-        fajl.write(f"{dani[i][0]} {dani[i][1]} {dani[i][2]}\n")
-```
-</details>
-
-<details markdown='block'>
-<summary>Rešenje korišćenjem rečnika </summary>
-
-```python 
-dani = []
-with open('ulaz3a.txt', 'r') as fajl:
-    for linija in fajl:
-        dan, temperatura = linija.rstrip().split(';')
-        if int(temperatura) <= 10:
-            osecaj = 'hladno'
-        else:
-            osecaj = 'toplo'
-        dani.append({'dan':dan, 'temperatura':int(temperatura), 'osecaj':osecaj})
-
-with open('izlaz3a.txt', 'w') as fajl:
-    for dan in dani:
-        fajl.write(f"{dan['dan']} {dan['temperatura']} {dan['osecaj']}\n")
-```
 </details>
