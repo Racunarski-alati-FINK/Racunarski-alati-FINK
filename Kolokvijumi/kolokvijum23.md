@@ -150,15 +150,14 @@ prevedi_u_sekunde(12345678)
 ## Drugi zadatak
 Napisati funkciju koja preuzeti niz iz glavnog programa A (n) postavlja za glavnu dijagonalu matrice B (n x n) pri čemu su ostali članovi matrice nule. Glavni program ispisuje niz A i matricu B.
 
-        primer:
+	primer:
         A = [1, 2, 3, 4]
         ------------
         Matrica B:
-
         [1, 0, 0, 0]
         [0, 2, 0, 0]
         [0, 0, 3, 0]
-        [0, 0, 0, 4]
+	[0, 0, 0, 4]
 
 <details markdown='block'>
 <summary>Rešenje</summary>
@@ -233,8 +232,41 @@ print(funkcija([2, 2, 2, 3, 4, 5],3)) # rešenje je 1615
 print(funkcija([1, 2, 3],2))  # rešenje je 33
 ```
 </details>
+## Drugi zadatak
+Napisati funkciju koja će za niz A dimenzije N da formira dva zasebna niza B i C i da izračuna razliku njihovih suma koja se ispisuje u glavnom programu. Niz B sadrži sve parne članove, dok niz C sadrži sve neparne članove niza A. Funkcija takođe ispisuje nizove B i C.
 
-## Drugi zadatak 
+	primer:
+ 	A = [1,5,2,7,4]   →   B = [2, 4], C = [1, 5, 7], 
+	sumaB = 2 + 4 = 6 
+ 	sumaC = 1 + 5 + 7 = 13, 
+	razlika = sumaB – sumaC = 6 – 13 = -7
+<details markdown='block'>
+<summary>Rešenje</summary>
+	
+```python
+def funkcija(A):
+    B=[]
+    C=[]
+    sumaB=0
+    sumaC=0
+    N = len(A)  # dužina niza A
+    for i in range(0,N):
+        if A[i]%2==0:	#ako je broj paran (ostatak pri deljenju sa 2 je jednak nuli
+            B.append(A[i])
+            sumaB=sumaB+A[i]
+        else:
+            C.append(A[i])
+            sumaC=sumaC+A[i]
+    print(f"Niz B: {B}, niz C: {C}")
+    razlika=sumaB-sumaC
+    return razlika
+#glavni program:
+print(funkcija([1,5,2,7,4]))
+```
+</details>
+
+
+## Treći zadatak 
 Napisati program koji otvara fajl [prodavnica_2a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/prodavnica_2a.txt)
 u kome svaka linija sadrži podatke o artiklima u
 prodavnici u formatu:  
@@ -287,29 +319,18 @@ with open('artikli.txt', 'w') as fajl:
 
 # Grupa 2b
 ## Prvi zadatak
-Funkcija uzima celobrojni niz i ceo broj X. Sortira niz u opadajućem poretku. Zatim unuli sve parne brojeve koji su veći od X, a neparnim manjim od X  dodeli vrednost 1. 
-
-	Primer: niz = [2, 6, -7, 0, 1, 5], x = 4  => [0, 5, 2, 1, 0, 1]  
-	Primer: niz = [5, 1, 8, -2, 7, -3, 10], x = 6 => [0, 0, 7, 1, 1, -2, 1]  
+Funkcija uzima skup koeficijenata (Niz A, dimenzije n) i vrednost promenljive x i računa polinom: p(x) = a₀ + 2a₁x³ + 4a₂x⁵ + 6a₃x⁷ + …
 
 <details markdown='block'>
 <summary>Rešenje</summary>
 
 ```python
-def funkcija(niz, x):
-    for i in range(0, len(niz)-1):
-        for j in range(i+1, len(niz)):
-            if niz[i] < niz[j]:
-                niz[i], niz[j] = niz[j], niz[i]
-
-    for i in range(len(niz)):
-        if niz[i] % 2 == 0 and niz[i] > x:
-            niz[i] = 0
-        elif niz[i] % 2 != 0 and niz[i] < x:
-            niz[i] = 1
+def funkcija(A, x):
+    polinom = A[0]  # Prvi koeficijent a₀
+    for i in range(1, len(A)):
+        result += (2 * i) * A[i] * x**(2 * i + 1)  # Računa svaki sledeći član
+    return polinom
  
-    return niz
-
 
 print(funkcija([2, 6, -7, 0, 1, 5], 4))
 print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
