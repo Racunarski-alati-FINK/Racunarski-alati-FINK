@@ -126,7 +126,6 @@ print(funkcija([1,2,3,4]))
 </details>
 
 ## Treći zadatak
-## Drugi zadatak
 Napisati program koji otvara fajl [spisak.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Jul/spisak.txt) u kome svaka linija sadrži naziv proizvoda, količinu i cenu u formatu:
 
     namirnica, kolicina, cena
@@ -220,7 +219,6 @@ print(funkcija([1,5,2,7,4]))
 
 
 ## Treći zadatak 
-
 Napisati program koji otvara fajl [raspored.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/raspored.txt) koji sadrži dnevni raspored filmova u bioskopu u formatu:
 
     naziv filma,vreme početka, dužina trajanja
@@ -321,7 +319,7 @@ for red in matrica:
 </details>
 
 # Treći zadatak
-Funkcija uzima fajl i broj studenata:
+Funkcija uzima fajl [studenti.txt]([https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/raspored.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2023/studenti.txt) i ukupan broj studenata.
 
 ime studenta;smer;poeni
 
@@ -329,37 +327,32 @@ ZADATAK: Kreirati listu studenata koji su polozili (preko 51 poen), Izracunati p
 ZAPIS U NOVI FAJL: Lista studenata koji su polozili ispit – red po red u formatu: ime poeni, Procenat studenata koji su polozili, Procenat studenata koji su izasli na ispit.
 
 
-Primer:
-
-	tacke.txt  
-	0,1  
-	2,10  
-	10,-3  
- 
-	rezultat.txt  
-	10,-3  
-	0,1  
-	2,10  
-	Srednja vrednost svih x koordinata je: 4  
-
 <details markdown='block'>
 <summary>Rešenje</summary>
 
 ```python
-tacke = []
-with open('tacke_2b.txt', 'r') as fajl:
-    for linija in fajl:
-        xkoord, ykoord = linija.rstrip().split(',')
-        tacka = {'x':float(xkoord), 'y':float(ykoord)}
-        tacke.append(tacka)
+def funkcija(ulaz, ukupno):
+    polozili = []
+    br = 0
+    izasli = 0
+    with open (ulaz, 'r') as fajl:
+        for linija in fajl:
+            print(linija)
+            ime, smer, poeni = linija.rstrip().lstrip().split(";")
+            poeni = int(poeni)
+            izasli+=1
+            if poeni > 51:
+                br +=1
+                polozili.append((ime, poeni))
+        procenat_polozili = br/ukupno * 100
+        procenat_izasli = izasli/ukupno * 100
 
-x_ukupno = 0
-y_ukupno = 0
-with open('izlaz2b.txt', 'w') as fajl:
-    for tacka in sorted(tacke, key=lambda tacka:tacka['y'], reverse=False):
-        fajl.write(f"{tacka['x']} {tacka['y']}\n")
-        x_ukupno += tacka['x']
-    fajl.write(f"Srednja vrednost svih x koordinata je {x_ukupno/len(tacke)}")
+    with open("polozili.txt", 'w') as fajl:
+        for student in polozili:
+            fajl.write(f"{student[0]}, {student[1]}, polozilo: {procenat_polozili}%, izašlo: {procenat_izasli}% \n")
+
+# glavni program:
+funkcija("studenti.txt", 50)
 
 ```
 </details>
@@ -409,55 +402,47 @@ print(C)
 </details>
 
 # Treći zadatak
-Napisati program koji otvara fajl [temperature_3a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/temperature_3a.txt).  
-Svaka linija fajla sadrzi podatke o temperaturama u nedelji u formatu:  
-    dan;temperatura
-Kreirati listu temperature koja sadrzi uredjene parove (dan, temperatura, osecaj).  
-Promenljiva osecaj ima vrednost:  
- -'hladno' ako je temperatura <= 10  
- -'toplo' ako je tmeperatura > 10  
+Napisati progam koji otvara fajl [glasovi_5b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/glasovi_5b.txt).  
+Fajl sadrzi spisak kandidata za predsednika Studentskog parlamenta  
+FINK u formatu:  
 
-Program kreira izlazni fajl rezultat.txt gde je svaka linija formatirana:  
-    
-    dan,temperatura,osecaj   
+	ime kandidata,smer koji studira,glasovi sa MI,glasovi sa UI i IZZS, glasovi RTSI
+
+U listu kandidati smestiti recnik za svakog kandidata  
+ kandidat = {'ime':ime, 'smer':smer, 'glasovi':suma glasova sa svih smerova}  
+
+Program kreira izlazni fajl rezultati.txt u svaka linija ima format:  
+
+	redni broj (i+1), ime kandidata, smer, broj glasova
+
+Kandidati u izlaznom fajlu su sortirani po broju osvojenih glasova.  
+
+U poslednjoj liniji stampa se ime novog predsednika parlamenta:  
+
+	Novi predsednik Studentskog parlamenta je {ime}. 
 
 <details markdown='block'>
-<summary>Rešenje korišćenjem uređenih parova </summary>
+<summary>Rešenje</summary>
 	
 ```python
-dani = []
-with open('temperature_3a.txt', 'r') as fajl:
+kandidati = []
+with open('glasovi_5b.txt', 'r') as fajl:
     for linija in fajl:
-        dan, temperatura = linija.rstrip().split(';')
-        if int(temperatura) <= 10:
-            osecaj = 'hladno'
-        else:
-            osecaj = 'toplo'
-        dani.append((dan, int(temperatura), osecaj))
+        ime, smer, glasovi_mi, glasovi_ui, glasovi_rtsi = linija.rstrip().split(',')
+        glasovi = int(glasovi_mi) + int(glasovi_ui) + int(glasovi_rtsi)
+        kandidat = {'ime': ime, 'smer': smer, 'glasovi': glasovi}
+        kandidati.append(kandidat)
 
-with open('izlaz3a.txt', 'w') as fajl:
-    for i in range(len(dani)):
-        fajl.write(f"{dani[i][0]} {dani[i][1]} {dani[i][2]}\n")
-```
-</details>
+# Sortiranje kandidata po broju glasova opadajuće
+kandidati = sorted(kandidati, key=lambda kandidat: kandidat['glasovi'], reverse=True)
 
-<details markdown='block'>
-<summary>Rešenje korišćenjem rečnika </summary>
-
-```python
-dani = []
-with open('temperature_3a.txt', 'r') as fajl:
-    for linija in fajl:
-        dan, temperatura = linija.rstrip().split(';')
-        if int(temperatura) <= 10:
-            osecaj = 'hladno'
-        else:
-            osecaj = 'toplo'
-        dani.append({'dan':dan, 'temperatura':int(temperatura), 'osecaj':osecaj})
-
-with open('izlaz3a.txt', 'w') as fajl:
-    for dan in dani:
-        fajl.write(f"{dan['dan']} {dan['temperatura']} {dan['osecaj']}\n")
+# Upis rezultata u izlazni fajl
+with open('izlaz_5b.txt', 'w') as fajl:
+    i = 0
+    for kandidat in kandidati:
+        i += 1
+        fajl.write(f'{i}, {kandidat["ime"]}, {kandidat["smer"]}, {kandidat["glasovi"]}\n') 
+    fajl.write(f'\nNovi predsednik Studentskog parlamenta je {kandidati[0]["ime"]}.\n')
 ```
 </details>
 
@@ -522,47 +507,40 @@ for red in A:
 </details>
 
 ## Тrеći zadatak
-Napisati program koji otvara fajl [tacke_3b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/tacke_3b.txt).  
-Svaka linija fajla predstavlja koordinate u formatu:  
-xkoord,ykoord  
-Napraviti listu tacke i u nju smestiti recnike,  
-koji sadrze podatke iz ucitanog fajla, pri cemu recnik treba  
-da bude u formatu:  
-tacka = {'x':xkoord, 'y':ykoord}  
-Sortirati tacke ykoord u rastucem poretku,  
-i tako sortirane tacke stampati u izlazni fajl rezultat.txt.  
-Poslednji red izlaznog fajla rezultat.txt) treba da sadrzi srednju vrednost svih xkoord.  
+Napisati program koji otvara fajl [test.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Februar/test.txt) koji sadrži spisak studenata u formatu:
 
-Primer:
-
-	tacke.txt  
-	0,1  
-	2,10  
-	10,-3  
-
-	rezultat.txt  
-	10,-3  
-	0,1  
-	2,10  
-	Srednja vrednost svih x koordinata je: 4  
+	Ime i prezime, broj tačnih odgovora, broj netačnih odgovora
+	Petar Petrović, 23, 7
+ 
+U izlazni fajl štampati spisak studenata koji su položili test u opadajućem poretku po sumi bodova 
+(test je položen ako je br_tačnih – br netačnih >= 15
 
 <details markdown='block'>
-<summary>Rešenje</summary>
-	
+<summary>Tačnije rešenje</summary>
+
 ```python
-tacke = []
-with open('tacke_3b.txt', 'r') as fajl:
-	for linija in fajl:
-		xkoord, ykoord = linija.rstrip().split(',')
-        tacka = {'x':float(xkoord), 'y':float(ykoord)}
-        tacke.append(tacka)
-x_ukupno = 0
-y_ukupno = 0
-with open('izlaz2b.txt', 'w') as fajl:
-    for tacka in sorted(tacke, key=lambda tacka:tacka['y'], reverse=False):
-        fajl.write(f"{tacka['x']} {tacka['y']}\n")
-        x_ukupno += tacka['x']
-    fajl.write(f"Srednja vrednost svih x koordinata je {x_ukupno/len(tacke)}")
+
+polozili = []
+nisu_polozili = []
+
+with open ('test.txt', 'r') as fajl:
+    for linija in fajl:
+        ime_prezime, br_tacnih, br_netacnih  = linija.lstrip().rstrip().split(',')
+        rezultat = int(br_tacnih) - int(br_netacnih)
+        if rezultat >= 15:
+            studenti_polozili = {'ime i prezime':ime_prezime, 'rezultat':rezultat}
+            polozili.append(studenti_polozili)
+        else:
+            studenti_nisu_polozili = {'ime i prezime':ime_prezime, 'rezultat':rezultat}
+            nisu_polozili.append(studenti_nisu_polozili)
+    
+with open('rezultat_3a_polozili.txt', 'w') as fajl:
+    for student in sorted(polozili, key = lambda studenti_polozili:studenti_polozili['rezultat']):
+        fajl.write(f"{student['ime i prezime']}, {student['rezultat']}\n")
+
+with open('rezultat_3a_nisu_polozili.txt', 'w') as fajl:
+    for student in sorted(nisu_polozili, key = lambda studenti_polozili:studenti_polozili['rezultat']):
+        fajl.write(f"{student['ime i prezime']}, {student['rezultat']}\n")
 ```
 </details>
 
@@ -625,35 +603,29 @@ print(funkcija([[1, 0, 3], [1, 2, 3], [1, 2, 5]]))
 </details>
 
 # Treći zadatak
-Napisati program koji otvara fajl [rezultati_4a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/rezultati_4a.txt).   
-Svaka linija fajla sadrzi ime studenta i poene na ispitu u formatu:
+Napisati program koji otvara fajl [nabavka.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Februar/nabavka.txt) koji sadrži spisak robe u formatu:
 
- 	ime studenta;poeni  
- Program treba da pročita podatke o studentima,  
- na osnovu broja poena dodeli argument položio (>=51)  
- ili nije položio (<51) studentu i štampa izlaznu datoteku  
- spisak.txt u formatu:   
-  ime studenta - polozio ime studenta - nije polozio  
+	Naziv artikla, Cena po komadu, Broj komada
+	secer, 100, 7
+ 
+U izlazni fajl štampati sortirane nazive artikala u rastućem poretku po ukupnoj ceni nabavke. 
 
 <details markdown='block'>
-<summary>Rešenje</summary>
-	
+<summary>Rešenje </summary>
+
 ```python
-studenti = []
-with open('rezultati_4a.txt') as fajl:
+spisak = []
+with open ('nabavka.txt', 'r') as fajl:
     for linija in fajl:
-        ime, poeni = linija.rstrip().split(';')
-        if int(poeni) >= 51:
-            status = 'polozio'
-        else:
-            status = 'nije polozio'
-        studenti.append((ime, status))
+        artikal, cena_po_komadu, br_komada = linija.lstrip().rstrip().split(',')
+        ukupna_vrednost = float(cena_po_komadu) * float(br_komada)
+        artikli = {'artikal':artikal,'ukupna_vrednost':ukupna_vrednost}
+        spisak.append(artikli)
 
-print(studenti)
-
-with open('rezultati_torke.txt', 'w') as fajl:
-    for i in range(len(studenti)):
-        fajl.write(f"{studenti[i][0]} - {studenti[i][1]}\n")
+with open('rezultat_2a.txt', 'w') as fajl:
+    for item in sorted(spisak, key = lambda artikli:artikli['ukupna_vrednost']):
+        fajl.write(f"{item['artikal']}, {item['ukupna_vrednost']}\n")
+# ukupna vrednost nije bila obavezna da se štampa
 ```
 </details>
 
@@ -708,51 +680,41 @@ print(funkcija([[1, 0, 3], [1, 2, 3], [1, 2, 5]]))
 </details>
 
 ## Treći zadatak
-Napisati program koji otvara program [kupovina_4b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/kupovina_4b.txt).  
-Svaka linija fajla sadrzi podatke od namirnici i kolicini za kupovinu:  
+Napisati program koji otvara fajl [dostavnica.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/tree/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/April) sa spiskom dostava jedne firme u toku jednog dana u formatu:
 
-    namirnica,kolicina,cena po komadu
+    tip vozila, registracija,predjeni kilometri,broj dostava
 
-Program stampa fajl racun.txt u kome je ispisan svaki proizvod   
-i potrosen novac po proizvodu (kolicina*cena)
-u formatu:  
+U izlazni fajl štampati spisak vozila sortiranih po profitu ostvarenom tog dana. Predjeni kilometar košta 34 dinara
+a svaka dostava vredi 250.
 
-    namirnica,novac
-
-Poslednja linija fajla je:  
-
-    Ukupno,suma novca 
-    
 <details markdown='block'>
-<summary>Rešenje korišćenjem uređenih parova</summary>
-	
+<summary>Rešenje</summary>
+  
 ```python
-proizvodi = []
-with open('kupovina_4b.txt', 'r') as fajl:
-    for linija in fajl:
-        namirnica, kolicina, cena = linija.rstrip().split(',')
-        novac = int(kolicina)*int(cena)
-        proizvodi.append((namirnica, novac))
+def dostava(ulaz):
+    vozila  = []
+    cena_po_km = 34
+    cena_dostave = 250
+    with open(ulaz) as fajl:
+        for linija in fajl:
+            tip_vozila, registracija, predjeni_km, br_dostava = linija.rstrip().split(',')
+            profit = int(br_dostava)*cena_dostave - int(predjeni_km)*cena_po_km
+            vozila.append((tip_vozila, registracija, profit))
 
-with open('kupovina_4b.txt', 'w') as fajl:
-    for i in range(len(proizvodi)):
-        fajl.write(f"{proizvodi[i][0]} {proizvodi[i][1]}\n")
+#sortiranje preko petlje (jedno od sortiranja je dovoljno)
+        for i in range(len(vozila)-1):
+            for j in range(i+1, len(vozila)):
+                if vozila[i][2] < vozila[j][2]:
+                    vozila[i], vozila[j] = vozila[j], vozila[i]
+# sortiranje preko sorted funkcije (jedno od sortiranja je dovoljno)
+        vozila = sorted(vozila, key=lambda vozilo: vozilo[2], reverse=True)
+# sortiranje preko sort metode (jedno od sortiranja je dovoljno)
+        vozila.sort(key=lambda  vozilo: vozilo[2], reverse=True)
+# ispisivanje u fajl
+    with open('rezultat.txt', 'w') as fajl:
+    for vozilo in vozila:
+        fajl.write(f'{vozilo[0]} {vozilo[1]} {vozilo[2]}\n')
+# glavni program
+dostava('dostavnica.txt')
 ```
-</details>
-<details markdown='block'>
-<summary>Rešenje korišćenjem rečnika</summary>
-	
-```python
-proizvodi = []
-with open('ulaz4b.txt', 'r') as fajl:
-    for linija in fajl:
-        namirnica, kolicina, cena = linija.rstrip().split(',')
-        proizvod = {'namirnica':namirnica, 'novac':int(kolicina)*int(cena)}
-        proizvodi.append(proizvod)
-
-with open('kupovina_recnici.txt', 'w') as fajl:
-    for proizvod in proizvodi:
-        fajl.write(f"{proizvod['namirnica']} {proizvod['novac']
-```
-</details>
 </details>
