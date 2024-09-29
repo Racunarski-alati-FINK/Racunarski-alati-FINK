@@ -326,7 +326,7 @@ Napisati funkciju koja preuzeti niz iz glavnog programa A (n) postavlja za spore
 		[0, 0, 0, 0, 1]
 		[0, 0, 0, 2, 0]
 	B = [0, 0, 3, 0, 0]
-    	[0, 4, 0, 0, 0]
+		[0, 4, 0, 0, 0]
 		[5, 0, 0, 0, 0]
 
 <details markdown='block'>
