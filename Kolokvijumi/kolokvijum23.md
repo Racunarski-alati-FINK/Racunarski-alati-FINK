@@ -1,6 +1,6 @@
 # Python II kolokvijum 2023.
 
-## Grupa 1a
+## Grupa 1
 ## Prvi zadatak
 Napisati funkciju koja vraća zbir cifara najviše četvorocifrenog broja
 
@@ -108,7 +108,7 @@ with open('nisu_polozili_recnici.txt', 'w') as fajl:
 ```
 </details>
 
-# Grupa 1b
+# Grupa 2
 ## Prvi zadatak
 Napisati funkciju koja broj sekundi pretvara u dane, sate, minute i sekunde.
 
@@ -207,7 +207,7 @@ with open('reci.txt', 'w') as fajl:
 ```
 </details>
 
-# Grupa 2a
+# Grupa 3
 ## Prvi zadatak
 Funkcija uzima skup koeficijenata (Niz A, dimenzije n) i vrednost promenljive x i računa polinom: p(x) = a₀ + a₁x² + a₂x³ + a₃x⁴ + …
 
@@ -317,7 +317,7 @@ with open('artikli.txt', 'w') as fajl:
 ```
 </details>        
 
-# Grupa 2b
+# Grupa 4
 ## Prvi zadatak
 Funkcija uzima skup koeficijenata (Niz A, dimenzije n) i vrednost promenljive x i računa polinom: p(x) = a₀ + 2a₁x³ + 4a₂x⁵ + 6a₃x⁷ + …
 
@@ -336,8 +336,44 @@ print(funkcija([2, 6, -7, 0, 1, 5], 4))
 print(funkcija([5, 1, 8, -2, 7, -3, 10], 6))
 ```
 </details>
-
 # Drugi zadatak
+Napisati funkciju koja preuzeti niz iz glavnog programa A (n) postavlja za sporednu dijagonalu matrice B (nxn), pri čemu su ostali članovi matrice nule. Glavni program ispisuje niz A i matricu B.
+
+	primer
+	A = [1, 2, 3, 4, 5]
+
+    	[0, 0, 0, 0, 1]
+    	[0, 0, 0, 2, 0]
+	B = [0, 0, 3, 0, 0]
+    	[0, 4, 0, 0, 0]
+	 	[5, 0, 0, 0, 0]
+
+<details markdown='block'>
+<summary>Rešenje</summary>
+
+```python
+def funkcija(A):
+    B=[]
+	N = len(A) 	#dužina niza A
+    for i in range (0,N):
+        red=[]
+        for j in range(0,N):
+            red.append(0)
+        B.append(red)
+    for i in range(0,N):
+        for j in range(0,N):
+            if i+j==N-1:
+                B[i][j]=A[i]
+    return(B)
+ 
+# glavni program:
+matrica = funkcija([1, 2, 3, 4, 5])
+for red in matrica:
+	print(red)
+```
+</details>
+
+# Treći zadatak
 Napisati program koji otvara fajl [tacke_2b.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/tacke_2b.txt).    
 Svaka linija fajla predstavlja koordinate u formatu:    
 xkoord,ykoord  
@@ -383,48 +419,50 @@ with open('izlaz2b.txt', 'w') as fajl:
 ```
 </details>
 
-# Grupa 3a
-## Prvi Zadatak
-Funkcija uzima kvadratnu matricu (n x n).
-Glavnom programu vraca sumu ivicnih clanova.
-Ivicni clanovi su clanovi prvog reda, prve kolone,
-poslednjeg reda i poslednje kolone.
-Izbeći sumiranje dvostrukih članova (članova u uglovima matrice).
+# Grupa 5
 
-Primer:  
+## Prvi zadatak
+Napisati funkciju koja uzima broj \(n\) koji predstavlja broj članova niza i računa vrednost niza prema formuli:
+p = 1 + 4/2 + 7/3 + 10/4 + 13/5 + …
 
-        [ 3, 6,  1
-    A =   7, 3,  9      => suma = 3 + 6 + 1 + 7 + 9 -1 + 5 + 11 = 41
-         -1,  5, 11]
+<details markdown='block'>
+<summary>Rešenje</summary>
 
-	   [ 1, 1, 1, 1,
-         1, 0, 0, 1,
-    A =  1, 0, 0, 1,     => suma = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 12 
-         1, 1, 1, 1]
+```python
+def funkcija(n):
+    p = 1
+    for i in range(2, n+1):
+        p += i / (3*i - 2)
+    return p
+
+```
+</details>
+## Drugi zadatak
+
+Napisati funkciju koja uzima dva niza \( A \) (n) i \( B \) (m) gde niz \( A \) predstavlja uneti niz brojeva, dok niz \( B \) predstavlja uneti niz redosleda članova i formira novi niz \( C \) od članova niza \( A \), a po indeksima iz niza \( B \).
+
+	A = [4, 6, 1, 7]
+ 	B= [0, 3, 2, 2, 3, 1, 0] 
+  	C = [4, 7, 1, 1, 7, 6, 4]
 
 
 <details markdown='block'>
 <summary>Rešenje</summary>
 
 ```python
-def funkcija(matrica):
-    suma = 0 
-    for i in range(len(matrica)):
-        if i == 0 or i == len(matrica)-1:
-            for j in range(len(matrica)):
-                suma += matrica[i][j]
-        else:
-            suma += matrica[i][0] + matrica[i][-1]
+def formiraj_niz(A, B):
+    C = [A[i] for i in B]
+    return C
 
-    return suma
-
-#pozivanje glavnog programa
-print(funkcija([[3, 6, 1], [7, 3, 9], [-1, 5, 11]]))
-print(funkcija([[1, 1, 1, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]]))
+# glavni program:
+A = [4, 6, 1, 7]
+B = [0, 3, 2, 2, 3, 1, 0]
+C = formiraj_niz(A, B)
+print(C)
 ```
 </details>
 
-# Drugi zadatak
+# Treći zadatak
 Napisati program koji otvara fajl [temperature_3a.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2022/temperature_3a.txt).  
 Svaka linija fajla sadrzi podatke o temperaturama u nedelji u formatu:  
     dan;temperatura
