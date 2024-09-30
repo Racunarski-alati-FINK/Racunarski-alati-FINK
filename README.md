@@ -7,10 +7,10 @@
   * Vojnoindustrijsko inženjerstvo (BVI1300)
 
 ## Cilj predmeta
-Ovladavanje osnovama računarskih alata u vezi poslovne primene računara (Word , Excel), programskih jezika FORTRAN i Python i inženjerskih računarskih alata.
+Ovladavanje osnovama računarskih alata u vezi poslovne primene računara (Word, Excel), programskih jezika FORTRAN i Python i inženjerskih računarskih alata.
 
 ## Ishod predmeta
-Korišćenje osnovih programa za poslovnu primenu računara (Word , Excel), rad sa programskim jezicima FORTRAN i Python i inženjerskih računarskih alata.
+Korišćenje osnovih programa za poslovnu primenu računara (Word, Excel), rad sa programskim jezicima FORTRAN i Python i inženjerskih računarskih alata.
 
 ## Sadržaj predmeta
 ### Teorijska nastava
@@ -41,7 +41,8 @@ Poslovna primena računara i Internet, Obrada teksta, Tabelarni račun, Internet
 ## Online Python editori:
 * [Replit](https://replit.com/languages/python3)  
 * [Onlinegdb](https://www.onlinegdb.com/)  
-* [Programiz](https://www.programiz.com/python-programming/online-compiler/)  
+* [Programiz](https://www.programiz.com/python-programming/online-compiler/)
+* [PythonTutor](https://www.programiz.com/python-programming/online-compiler/)
 
 ## Nastava
 
