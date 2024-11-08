@@ -24,6 +24,7 @@ Poslovna primena računara i Internet, Obrada teksta, Tabelarni račun, Internet
 2. Filipović N: Programski jezik C, Tehnički fakultet Čačak, Čačak, 2003.
 3. Parezanović N.: Fortran 77, Naučna knjiga, Beograd, 1994.
 4. Guttag J.: Introduction to Computation and Programming Using Python, The MIT Press, London, 2013.
+5. [Petlja.org zbirka](https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/Zbirka-python/Zbirka1py.pdf#%5B%7B%22num%22%3A367%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C85.04%2C646.39%2Cnull%5D)
 
 
 ## Predavači:
