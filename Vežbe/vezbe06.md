@@ -92,7 +92,7 @@ print(f"Niska {niska} se sastoji od {samoglasnici} samoglasnika.")
 ```
 
 ## Četvrti primer
-Za unetu reč odrediti da li je palindrom (potop, melem)
+Za unetu reč odrediti da li je palindrom - reči koje se i sa desna i sa leva čitaju na isti način (potop, melem)
 
 ```python
 rec = input("Uneti reč: ")
@@ -117,7 +117,7 @@ else:
 
 
 ## Peti primer
-Za unete dve reči odrediti da li su anagrami (ortoped - torpedo)
+Za unete dve reči odrediti da li su anagrami - reči koje se sastoje od istog broja istih slova (ortoped - torpedo)
 
 ```python
 rec1 = input("Uneti prvu reč: " )
@@ -126,6 +126,23 @@ if sorted(rec1) == sorted(rec2):                            # sortira slova unut
     print(f"Reči {rec1} i {rec2} jesu anagrami")
 else:
     print(f"Reči {rec1} i {rec2} nisu anagrami")
+```
+
+primer:
+
+```python
+    >>> print(sorted("ortoped")
+        ['d', 'e', 'o', 'o', 'p', 'r', 't']
+    >>> print(sorted("torpedo"))
+        ['d', 'e', 'o', 'o', 'p', 'r', 't']
+# pošto su dobijene liste jednake, reči jesu anagrami 
+
+    >>> print(sorted("ortoped"))
+        ['d', 'e', 'o', 'o', 'p', 'r', 't']
+    >>> print(sorted("pedijatar"))
+        ['a', 'a', 'd', 'e', 'i', 'j', 'p', 'r', 't']
+# dobijene liste nisu jednake, reči nisu anagrami
+
 ```
 
 ## Šesti primer
