@@ -171,16 +171,17 @@ Funkcija uzima skup koeficijenata (Niz A, dimenzije n) i vrednost promenljive x 
 	
 ```python
 def funkcija(koeficijenti,x):
+def funkcija(koeficijenti,x):
 	stepen = 2
 	polinom = koeficijenti[0]
-	for koeficijent in koeficijenti:
-		polinom = polinom + koeficijent * x ** stepen
+	for i in range(1,len(koeficijenti)):
+		polinom = polinom + koeficijenti[i] * x ** stepen
 		stepen = stepen + 1
 	return polinom
 
 #glavni program
-print(funkcija([3, 5, 77, 1, 2, 8, 3],2)) # rešenje je 522
-print(funkcija([2, 2, 2, 3, 4, 5],3)) # rešenje je 1615
+print(funkcija([3, 5, 77, 1, 2, 8, 3],2)) # rešenje je 1615
+print(funkcija([2, 2, 2, 3, 4, 5],3)) # rešenje je 4934
 print(funkcija([1, 2, 3],2))  # rešenje je 33
 ```
 </details>
