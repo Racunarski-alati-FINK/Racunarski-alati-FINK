@@ -43,23 +43,23 @@ print(f"Zbir cifara unetog broja {broj} je {zbir}")
 
 
 ## Drugi primer
-Proveriti da li je uneti TROCIFRENI broj Armstrongov
+Proveriti da li je uneti TROCIFRENI broj Armstrongov.  
 Broj je Armstrongov ako je zbir kubova njegovih cifara jednak samom broju 
     
     primer: 1³ + 5³ + 3³ = 153
 
 ```python
 broj = int(input("Unesi najviše trocifreni broj n = "))        # unošenje broja sa tastature
-if len(str(n)) <= 3:                                        # provera od koliko se cifara broj sastoji
+if len(str(n)) <= 3:                                           # provera od koliko se cifara broj sastoji
     jedinice = broj % 10
     desetice = broj % 100 // 10
     stotine = broj // 100
-    if jedinice ** 3 + desetice ** 3 + stotine ** 3 == n:   # provera da li je zbir kubova cifara jednak broju
+    if jedinice ** 3 + desetice ** 3 + stotine ** 3 == n:      # provera da li je zbir kubova cifara jednak broju
         print(f"Broj {broj} jeste Armstrongov")                # ispis ako je uslov ispunjen   
     else:
         print(f"Broj {broj} nije Armstrongov")                 # ispis ako uslov nije ispunjen
 else:
-    print("Broj je veći od trocifrenog!")                  #ispis ako je unet broj veći od trocifrenog
+    print("Broj je veći od trocifrenog!")                      #ispis ako je unet broj veći od trocifrenog
 ```
 
 Analogno prethodnom zadatku, rešenje ovog zadatka korišćenjem WHILE petlje:
@@ -80,7 +80,7 @@ else:
 ```
 
 ## Treći primer
-Unetoj niski prebrojati samoglasnike i suglasnike
+Unetoj niski prebrojati samoglasnike
 
 ```python
 niska = input("Unesi nisku: ")
@@ -89,6 +89,33 @@ for slovo in niska:
     if slovo in "aeiouAEIOU":
         samoglasnici = samoglasnici + 1
 print(f"Niska {niska} se sastoji od {samoglasnici} samoglasnika.")
+```
+Ako bismo prebrojavali i suglasnike:
+
+```python
+niska = input("Unesi nisku: ")
+samoglasnici = 0
+suglasnici = 0
+for slovo in niska:
+    if slovo in "aeiouAEIOU":
+        samoglasnici = samoglasnici + 1
+    else:
+        suglasnici = suglasnici + 1
+print(f"Niska {niska} se sastoji od {samoglasnici} samoglasnika i {suglasnici} suglasnika.")
+```
+
+ovako urađen zadatak računa i razmake, brojeve i specijalne karaktere kao suglasnike, ako prebrojavamo samo slova, koristimo metodu [isalfa()](https://www.w3schools.com/python/ref_string_isalpha.asp)
+
+```python
+niska = input("Unesi nisku: ")
+samoglasnici = 0
+suglasnici = 0
+for slovo in niska:
+    if slovo in "aeiouAEIOU":
+        samoglasnici = samoglasnici + 1
+    elif slovo.isalfa():
+        suglasnici = suglasnici + 1
+print(f"Niska {niska} se sastoji od {samoglasnici} samoglasnika i {suglasnici} suglasnika.")
 ```
 
 ## Četvrti primer
@@ -103,7 +130,9 @@ else:
     print(f"{rec} nije palindrom")
 ```
 
-Ako bismo proveravali da li je uneta rečenica palindrom, morali bismo da uklonimo razmake. To možemo da uradimo primenom metode replace(" ",""):
+Ako bismo proveravali da li je uneta rečenica palindrom, morali bismo da uklonimo razmake. To možemo da uradimo primenom metode [replace(" ","")](
+https://www.w3schools.com/python/ref_string_replace.asp):
+
 
 ```python
 recenica = input("Uneti reč: ")
