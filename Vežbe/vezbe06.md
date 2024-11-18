@@ -3,18 +3,18 @@
 Izračunaj zbir cifara unetog trocifrenog broja:
 
 ```python
-n = int(input("Unesi najviše trocifreni broj "))        # unošenje broja sa tastature i pretvaranje unete vrednosti u celobrojnu - int
-if len(str(broj)) <= 3:                                        # provera da li broj ima tri cifre ili manje - pretvaramo u str jer len() ne može nad int
-#if n < 999:                                                # ako želimo da izbegnemo len()  
-    jedinice = broj % 10                                       # ostatak pri deljenju unetog broja sa 10 je cifra jedinica, npr 123 % 10 = 12 (ostatak je 3)
-    desetice = broj % 100 // 10                                # prvo odredimo ostatak pri deljenju unetog broja brojem 100 (123 % 100 = 23) ž
-                                                            # a onda ostatak celobrojno podelimo sa 10 (23 // 10 = 2 (ostatak 3)) - dobijemo cifru desetica
-    stotine = broj // 100                                      # celobrojno deljenje unetog broja sa 100 je cifra stotina, npr 123 // 100 = 1 (ostatak je 23)
-    print(f"Stotine: {stotine}, desetice: {desetice}, jedinice: {jedinice}")  # štampanje pojedinačnih cifara
-    zbir = jedinice + desetice + stotine                    # izračunavanje zbira cifara
-    print(f"Zbir cifara broja {broj} je {zbir}.")              # štampanje zbira cifara
+n = int(input("Unesi najviše trocifreni broj "))                                 # unošenje broja sa tastature i pretvaranje unete vrednosti u celobrojnu - int
+if len(str(broj)) <= 3:                                                          # provera da li broj ima tri cifre ili manje - pretvaramo u str jer len() ne može nad int
+#if n < 999:                                                                     # ako želimo da izbegnemo len()  
+    jedinice = broj % 10                                                         # ostatak pri deljenju unetog broja sa 10 je cifra jedinica, npr 123 % 10 = 12 (ostatak je 3)
+    desetice = broj % 100 // 10                                                  # prvo odredimo ostatak pri deljenju unetog broja brojem 100 (123 % 100 = 23) ž
+                                                                                 # a onda ostatak celobrojno podelimo sa 10 (23 // 10 = 2 (ostatak 3)) - dobijemo cifru desetica
+    stotine = broj // 100                                                        # celobrojno deljenje unetog broja sa 100 je cifra stotina, npr 123 // 100 = 1 (ostatak je 23)
+    print(f"Stotine: {stotine}, desetice: {desetice}, jedinice: {jedinice}")     # štampanje pojedinačnih cifara
+    zbir = jedinice + desetice + stotine                                         # izračunavanje zbira cifara
+    print(f"Zbir cifara broja {broj} je {zbir}.")                                # štampanje zbira cifara
 else:
-    print("Broj je veći od trocifrenog!")                   # ako uslov nije ispunjen da broj ima najviše tri cifre, ispisuje se poruka
+    print("Broj je veći od trocifrenog!")                                        # ako uslov nije ispunjen da broj ima najviše tri cifre, ispisuje se poruka
 ```
 
 Ako želimo da uradimo isti zadatak bez ograničenja u broju cifara, koristićemo WHILE petlju
@@ -46,7 +46,7 @@ print(f"Zbir cifara unetog broja {broj} je {zbir}")
 Proveriti da li je uneti TROCIFRENI broj Armstrongov
 Broj je Armstrongov ako je zbir kubova njegovih cifara jednak samom broju 
     
-    primer: 1^3 + 5^3 + 3^3 = 153
+    primer: 1³ + 5³ + 3³ = 153
 
 ```python
 broj = int(input("Unesi najviše trocifreni broj n = "))        # unošenje broja sa tastature
@@ -80,7 +80,7 @@ else:
 ```
 
 ## Treći primer
-Unetoj niski prebrojati samoglasnike i suglasnike """
+Unetoj niski prebrojati samoglasnike i suglasnike
 
 ```python
 niska = input("Unesi nisku: ")
@@ -90,7 +90,6 @@ for slovo in niska:
         samoglasnici = samoglasnici + 1
 print(f"Niska {niska} se sastoji od {samoglasnici} samoglasnika.")
 ```
-
 
 ## Četvrti primer
 Za unetu reč odrediti da li je palindrom (potop, melem)
@@ -119,8 +118,6 @@ else:
 
 ## Peti primer
 Za unete dve reči odrediti da li su anagrami (ortoped - torpedo)
-
-
 
 ```python
 rec1 = input("Uneti prvu reč: " )
