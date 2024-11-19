@@ -135,7 +135,7 @@ def srednja_vrednost_niza(niz):
         brojac += 1
     return suma/brojac
 ```
-#### Osmi primer
+### Osmi primer
 Funkcija koja vrednostima niza koje su manje od srednje vrednosti dodeljuje vrednost nula.     
 _Napomena: funkcija podrazumeva izračunavanje srednje vrednosti funkcijom iz prethodnog primera_
 
