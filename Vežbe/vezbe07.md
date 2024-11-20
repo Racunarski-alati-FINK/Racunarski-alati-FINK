@@ -41,7 +41,7 @@ else:
     print(f"Niska {niska} ima podjednak broj malih i velikih slova")
 ```
 
-Možemo da koristimo i ugrađene metode [islower()](https://www.w3schools.com/python/ref_string_islower.asp) i [isupper](https://www.w3schools.com/python/ref_string_isupper.asp).
+Možemo da koristimo i ugrađene metode [islower()](https://www.w3schools.com/python/ref_string_islower.asp) i [isupper()](https://www.w3schools.com/python/ref_string_isupper.asp).
 
 ```python
 niska = input("Unesi reč: ")
@@ -101,8 +101,8 @@ print(f"Najveća vrednost niza je {maksimum}, a njen indeks je {indeks}.")
 ```
 Na isti način dolazimo do najmanjeg člana niza, i njegovog indeksa:
 ```python
-minimum = min(niz)
-indeks = niz.index(minimum)					# primenom metode
+minimum = min(niz)									# funkcija za nalaženje minimuma
+indeks = niz.index(minimum)							# metoda za nalaženje indeksa promenljive "minimum" u listi "niz"
 print(f"Najmanja vrednost niza je {minimum}, a njen indeks je {indeks}.")
 
 # bez metoda i funkcija:
@@ -112,7 +112,7 @@ for i in range(n):
     if niz[i] < minimum:  							# poredi da li je član manji od pretpostavljenog min
         minimum = niz[i]   							# ako jeste on postaje novi maksimum
         indeks = i
-print(f"Najmanja vrednost niza je {minimum}, a njen indeks je {indeks}.")"""
+print(f"Najmanja vrednost niza je {minimum}, a njen indeks je {indeks}.")
 ```
 
 ## Peti primer
@@ -135,10 +135,10 @@ print(f"Niz sortiran u rastućem poretku: {sorted(niz)}")
 A ako želimo sami da napišemo algoritam za sortiranje [selection sort](https://www.youtube.com/watch?v=QsNeEm1a-rU):
 
 ```python
-for i in range(0,n):														# dve petlje, poredimo element i-tog indeksa sa elementima desno od i
+for i in range(0,n):												# dve petlje, poredimo element i-tog indeksa sa elementima desno od i
     for j in range(i+1,n):
         if niz[i] > niz[j]:
-            niz[i], niz[j] = niz[j], niz[i]      							# zamena mesta članovima, niz[i] uzima vrednost niz[j] i obrnuto
+            niz[i], niz[j] = niz[j], niz[i]      					# zamena mesta članovima, niz[i] uzima vrednost niz[j] i obrnuto
 print(f"Niz sortiran u rastućem poretku: {niz}")
 ```
 Zamena mesta članovima može da se izvrši i uvođenjem pomoćne, privremene, promenljive:
