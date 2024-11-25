@@ -1,7 +1,6 @@
 # Vežbanje
 ## Prvi primer
-Preformulisati polinom oblika x^2 + 2x^3 + 3x^4 + ... 9x^10 
-u python kod i izracunati njegovu vrednost za uneto x.
+Naći vrednost polinoma x² + 2x³ + 3x⁴ + ... + 9x¹⁰ za uneto x.
 ```python
 x = int(input("Unesi broj x = "))
 vrednost = 0
@@ -10,8 +9,7 @@ for i in range(1,10):
 print(f"Rešenje polinoma za uneto {x} je {vrednost}.")
 ```
 ## Drugi primer
-Preformulisati polinom oblika 4x^2 + 6x^3 + 8x^4 + ... 20x^10 
-u python kod i izracunati njegovu vrednost za uneto x.
+Naći vrednost polinoma 4x² + 6x³ + 8x⁴ + ... + 20x¹⁰ za uneto x.
 ```python
 x = int(input("Unesi broj x = "))
 polinom = 0
@@ -19,7 +17,7 @@ for i in range(4,21,2):
     polinom = polinom + i * x ** (i/2)
 print(f"Vrednsot polinoma za uneto {x} je {polinom}.")
 ```
-ili
+ili:
 ```python
 polinom = 0
 for i in range(2,11):
@@ -39,8 +37,7 @@ for i in range(9):
 print(f"Vrednost polinoma za uneto {x} je {polinom}.")
 ```
 ## Treći primer
-Napisati program koji u unetom nizu A dimenzije N sve 
-negativne clanove niza zamenjuje nulom.
+Napisati program koji u unetom nizu A dimenzije n sve negativne clanove niza zamenjuje nulom.
 ```python
 n = int(input("Unesi broj članova niza "))
 nizA = []
@@ -54,9 +51,9 @@ for i in range(0,n):
 print(nizA)
 ```
 ## Četvrti primer
-Napisati program koji uneti niz A dimenzije N deli na dva niza B i C. 
-Niz B treba da sadrzi sve parne clanove, dok niz C treba da sadrzi sve neparne 
-clanove niza A.
+Napisati program koji uneti niz A dimenzije n deli na dva niza B i C. 
+Niz B treba da sadrži sve parne članove niza A, dok niz C treba da sadrži sve neparne 
+članove niza A.
 ```python
 #nizA = [1,2,3,4,5,6,7,8,9,10]     #ako se ne unosi sa tastature
 nizA = []
