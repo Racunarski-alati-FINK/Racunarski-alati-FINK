@@ -171,7 +171,6 @@ Funkcija uzima skup koeficijenata (Niz A, dimenzije n) i vrednost promenljive x 
 	
 ```python
 def funkcija(koeficijenti,x):
-def funkcija(koeficijenti,x):
 	stepen = 2
 	polinom = koeficijenti[0]
 	for i in range(1,len(koeficijenti)):
