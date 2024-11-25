@@ -14,45 +14,31 @@ Preformulisati polinom oblika 4x^2 + 6x^3 + 8x^4 + ... 20x^10
 u python kod i izracunati njegovu vrednost za uneto x.
 ```python
 x = int(input("Unesi broj x = "))
-vrednost = 0
+polinom = 0
 for i in range(4,21,2):
-    vrednost = vrednost + i * x ** (i/2)
-print(f"Rešenje polinoma za uneto {x} je {vrednost}.")
+    polinom = polinom + i * x ** (i/2)
+print(f"Vrednsot polinoma za uneto {x} je {polinom}.")
+```
+ili
+```python
+polinom = 0
+for i in range(2,11):
+    polinom = polinom + 2*i * x ** (i)
+print(f"Vrednost polinoma za x = {x} je {polinom}")
 ```
 ili:
 ```python
 x = int(input("Unesi broj x = "))
-vrednost = 0
+polinom = 0
 koeficijent = 4
 stepen = 2
 for i in range(9):
-    vrednost = vrednost + koeficijent * x ** stepen
+    polinom = polinom + koeficijent * x ** stepen
     koeficijent += 2
     stepen += 1
-print(f"Rešenje polinoma za uneto {x} je {vrednost}.")
+print(f"Vrednost polinoma za uneto {x} je {polinom}.")
 ```
 ## Treći primer
-Napisati program koji uneti niz A dimenzije N deli na dva niza B i C. 
-Niz B treba da sadrzi sve parne clanove, dok niz C treba da sadrzi sve neparne 
-clanove niza A.
-```python
-#niz = [1,2,3,4,5,6,7,8,9,10]     #ako se ne unosi sa tastature
-nizA = []
-n = int(input("Unesi broj članova niza "))
-for i in range(n):                # for i in range len(niz)) # ako niz nije unet sa tastature
-    clan = int(input(f"Unesi A[{i}] = "))
-    nizA.append(clan)
-print(nizA)
-nizB = []   #prazan niz B
-nizC = []   # prazan niz C
-for i in range(n):
-    if nizA[i] % 2 == 0:        # ako je i-ti član niza deljiv sa 2
-        nizB.append(nizA[i])    # dodaj ga u niz B  
-    else:                       # u suprotnom
-        nizC.append(nizA[i])    # dodaj ga u niz C
-print(f"Niz B je {nizB}, a niz C je {nizC}.")
-```
-## Četvrti primer
 Napisati program koji u unetom nizu A dimenzije N sve 
 negativne clanove niza zamenjuje nulom.
 ```python
@@ -67,26 +53,53 @@ for i in range(0,n):
         nizA[i] = 0        # dodeli mu vrednost 0
 print(nizA)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Četvrti primer
+Napisati program koji uneti niz A dimenzije N deli na dva niza B i C. 
+Niz B treba da sadrzi sve parne clanove, dok niz C treba da sadrzi sve neparne 
+clanove niza A.
+```python
+#nizA = [1,2,3,4,5,6,7,8,9,10]     #ako se ne unosi sa tastature
+nizA = []
+n = int(input("Unesi broj članova niza "))
+for i in range(n):
+# for i in range len(nizA)) # ako niz nije unet sa tastature
+    clan = int(input(f"Unesi A[{i}] = "))
+    nizA.append(clan)
+print(nizA)
+nizB = []   #prazan niz B
+nizC = []   # prazan niz C
+for i in range(n):
+# for i in range len(nizA)) # ako niz nije unet sa tastature
+    if nizA[i] % 2 == 0:        # ako je i-ti član niza deljiv sa 2
+        nizB.append(nizA[i])    # dodaj ga u niz B  
+    else:                       # u suprotnom
+        nizC.append(nizA[i])    # dodaj ga u niz C
+print(f"Niz B je {nizB}, a niz C je {nizC}.")
+```
+## Peti primer
+Napisati program koji unetoj reči zamenjuje velika i mala slova engleske abecede (AcA = aCa).
+```python
+rec = input("Unesite reč ")
+nova_rec = ""                                    # deklarisanje promenljive kao prazna niska
+for slovo in rec:
+    if slovo >="a" and slovo <="z":              # ukoliko se slovo nalazi u opsegu malih slova
+        nova_rec = nova_rec + slovo.upper()      # prebaci ga u veliko, metodom upper()
+    elif slovo >="A" and slovo <= "Z":           # ukoliko se slovo nalazi u opsegu velikih slova
+        nova_rec = nova_rec + slovo.lower()      # prebaci ga u malo, metodom lower()
+print(f"Vaša reč {rec}, nakon zamene velikih i maloh slova je {nova_rec}")
+```
+## Šesti primer
+Napisati program koji za unetu rečenicu izdvaja reč najveće dužine.
+```python
+recenica = input("Unesi rečenicu ")
+najduza_rec = recenica[0]                 # pretpostavljamo da je najduža reč prvo slovo
+rec = ""                                  # deklarišemo privremenu promenljivu "reč" kao praznu nisku
+for slovo in recenica:                    # za svako slovo u rečenici
+    if slovo != " ":                      # ukoliko je slovo različito od razmaka
+        rec = rec + slovo                 # dodaj ga u privremenu promenljivu "reč"
+        if len(rec) > len(najduza_rec):   # ako je dužina trenutne reči duža od trenutno najduže reči
+            najduza_rec = rec             # nova najduza_rec postaje ta reč
+    else:
+        rec = ""                          # ukoliko se slovo ne razlikuje od razmaka, resetuj promenljivu reč u praznu nisku
+print(f"U unetoj rečenici '{recenica}', najduža reč je '{najduza_rec}'")
+```
