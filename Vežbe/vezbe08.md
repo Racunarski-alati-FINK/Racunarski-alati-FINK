@@ -83,6 +83,8 @@ for slovo in rec:
         nova_rec = nova_rec + slovo.upper()      # prebaci ga u veliko, metodom upper()
     elif slovo >="A" and slovo <= "Z":           # ukoliko se slovo nalazi u opsegu velikih slova
         nova_rec = nova_rec + slovo.lower()      # prebaci ga u malo, metodom lower()
+    else:
+        nova_rec = nova_rec + slovo              # sve što nije slovo se prepisuje
 print(f"Vaša reč {rec}, nakon zamene velikih i maloh slova je {nova_rec}")
 ```
 ## Šesti primer
