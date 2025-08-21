@@ -320,7 +320,7 @@ for red in matrica:
 </details>
 
 ## Treći zadatak
-Funkcija uzima fajl [studenti.txt]([https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/Ulazni%20fajlovi/2023/Januar/raspored.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2023/studenti.txt) i ukupan broj studenata.
+Funkcija uzima fajl [studenti.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Kolokvijumi/Ulazni%20txt%20fajlovi/2023/studenti.txt) i ukupan broj studenata.
 
 ime studenta;smer;poeni
 
