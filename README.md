@@ -110,5 +110,12 @@ nedelja|   predavanja  |     vežbe
   
 </details>
 
+<details markdown='block'>
+<summary>2025/2026</summary>
+
+* [Tabela sa bodovima, 2024/2025](https://docs.google.com/spreadsheets/d/1MgFz6GeOKeFGMMoGHHgXgvuMIGgWT3_MC4DfmEzfusg/edit?gid=0#gid=0)
+  
+</details>
+
 ## Zadaci sa prethodnih kolokvijuma i ispita se mogu naći na [linku](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ispitni%20rokovi/ispitni_rokovi.md)
 
