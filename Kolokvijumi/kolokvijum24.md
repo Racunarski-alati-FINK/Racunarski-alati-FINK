@@ -2,7 +2,9 @@
 
 ## Grupa 1
 ### Prvi zadatak
-Napisati program koji računa vrednost funkcije y = (2X^3)/6 + (3X^5)/9 + (4X^7)/12 + … + (20X^39)/60
+Napisati program koji računa vrednost funkcije  $y = \frac{2X^3}{6} + \frac{3X^5}{9} + \frac{4X^7}{12} + \cdots + \frac{20X^{39}}{60}$
+
+
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -69,7 +71,7 @@ print(f"U reči {rec}, razlika broja velikih i malih slova je {razlika}.")
 
 ## Druga grupa
 ### Prvi zadatak
-Napisati program koji računa vrednost funkcije y = (6X^3)/2 + (9X^5)/3 + (12X^7)/4 + … + (60X^39)/20 za zadato X.
+Napisati program koji računa vrednost funkcije $y = \frac{6X^3}{2} + \frac{9X^5}{3} + \frac{12X^7}{4} + \cdots + \frac{60X^{39}}{20}$ za zadato X.
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -147,7 +149,7 @@ print(nova_rec)
 
 ## Treća grupa
 ### Prvi zadatak
-Napisati program koji računa vrednost funkcije y = X^6/2 + X^9/3 + X^12/4 + … + X^30/10 za zadato X. '''
+Napisati program koji računa vrednost funkcije $y = \frac{X^6}{2} + \frac{X^9}{3} + \frac{X^{12}}{4} + \cdots + \frac{X^{30}}{10}$ za zadato X.
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -215,7 +217,7 @@ print(nova_rec)
 ## Četvrta grupa
 ### Prvi zadatak
 
-Napisati program koji računa vrednost funkcije y = X^30/15 + X^28/14 + X^26/13 + … + X^2 za zadato X
+Napisati program koji računa vrednost funkcije $y = \frac{X^{30}}{15} + \frac{X^{28}}{14} + \frac{X^{26}}{13} + \cdots + X^2$ za zadato X
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -280,7 +282,7 @@ print(f"Broj pojavljivanja slova M u reči {rec} je {br}")
 
 ## Peta grupa
 ### Prvi zadatak
-Napisati program koji računa vrednost funkcije y = X^2/3 + 2X^3/4 + 3X^4/5 + … + 29X^30/31 za zadato X.'''
+Napisati program koji računa vrednost funkcije $y = \frac{X^2}{3} + \frac{2X^3}{4} + \frac{3X^4}{5} + \cdots + \frac{29X^{30}}{31}$ za zadato X.
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -392,7 +394,7 @@ print(f"Reč {rec} se sastoji od {samoglasnici} samoglasnika i {suglasnici} sugl
 
 ## Šesta grupa
 ### Prvi zadatak
-Napisati program koji računa vrednost funkcije y = 3X^2 + 4X^3/2 + 5X^4/3 + … + 31X^30/29 za zadato X.
+Napisati program koji računa vrednost funkcije $y = 3X^2 + \frac{4X^3}{2} + \frac{5X^4}{3} + \cdots + \frac{31X^{30}}{29}$ za zadato X.
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -514,7 +516,7 @@ print(f"Reč {rec} se sastoji od {samoglasnici} samoglasnika i {suglasnici} sugl
 ## Sedma grupa
 ### Prvi zadatak
 
-Napisati program koji računa vrednost proizvoda: P(x,n)=(x+1)⋅(x2+2)⋅(x3+3)⋅…⋅(xn+n) za uneto x i n
+Napisati program koji računa vrednost proizvoda: $P(x,n) = (x+1)\,(x^2+2)\,(x^3+3)\cdots(x^n+n)$ za uneto x i n
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -579,8 +581,7 @@ print(f"Novodobijena recenica je '{recenica_nova}'.")
 ## Osma grupa
 ### Prvi zadatak
 
-Napisati program koji računa vrednost funkcije y = x^12 * x^9/2 * x^6/3 * … * 1/5
-za uneto x.
+Napisati program koji računa vrednost funkcije $y = x^{12}\cdot \frac{x^9}{2}\cdot \frac{x^6}{3}\cdot \cdots \cdot \frac{1}{5}$ za uneto x.
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -600,7 +601,7 @@ print(f"Rešenje polinoma za x = {x} je {y}")
 
 ### Drugi zadatak
 
-Napisati program koji će za uneti niz pozitivnih brojeva A izračunati faktorijel maksimalnog broja (faktorijel broja 5: 5! = 5*4*3*2*1). 
+Napisati program koji će za uneti niz pozitivnih brojeva A izračunati faktorijel maksimalnog broja (faktorijel broja 5: $5! = 5\cdot 4\cdot 3\cdot 2\cdot 1$). 
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -649,8 +650,7 @@ print(f"Novodobijena recenica je '{recenica_nova}'.")
 ## Deveta grupa
 ### Prvi zadatak
 
-Napisati program koji računa vrednost funkcije y = (2X^3)/6 + (3X^5)/9 + (4X^7)/12 + … + (20X^39)/60.
-Za uneto X.
+Napisati program koji računa vrednost funkcije $y = \frac{2X^3}{6} + \frac{3X^5}{9} + \frac{4X^7}{12} + \cdots + \frac{20X^{39}}{60}$ za uneto X.
 
 <details markdown='block'>
 <summary>Rešenje </summary>
@@ -697,13 +697,13 @@ print("Broj izmenjenih članova:", brojac)
 ### Treći zadatak
 Napisati program koji za unetu rečenicu prebrojava velika slova i razmake i štampa rezultat funkcije:
 
-\[
+$$
 f =
 \begin{cases}
 \text{razmaci}^2, & \text{ako je } slova < razmaci \\
-\frac{slova}{razmaci}, & \text{ako je } slova >= razmaci
+\dfrac{slova}{razmaci}, & \text{ako je } slova \ge razmaci
 \end{cases}
-\]
+$$
 
 
 <details markdown='block'>
@@ -727,4 +727,5 @@ else:
 print(f"Vrednost funkcije f = {f}")
 
 ```
+
 </details>
