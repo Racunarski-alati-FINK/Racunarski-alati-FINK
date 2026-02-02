@@ -4,7 +4,9 @@ Napisati program koji otvara spisak namirnica na stanju u magacinu kao magacin.t
 
 Svaka linija fajla predstavlja informaciju o zalihama jednog proizvoda.
 
-{naziv proizvoda},{stanje u magacinu},{optimalno stanje},{cena po komadu}
+
+    {naziv proizvoda}  {stanje u magacinu}  {optimalno stanje}  {cena po komadu}
+
 
 Program proverava brojno stanje namirnica. Ukoliko je stanje u magacinu manje od optimuma,
 automatski se narucuje onoliko proizvoda koliko nedostaje do optimalnog stanja u magacinu.
@@ -27,4 +29,5 @@ with open('narudzbina.txt', 'w') as fajl:
         fajl.write(f"{proizvod['naziv']}, {proizvod['kolicina']}, {proizvod['cena']*proizvod['kolicina']}\n")
     fajl.write(f'Ukupno {ukupno}')
 ```
+
 
