@@ -1,0 +1,9 @@
+Prasak,1800,600,900
+Brasno,500,1300,50
+Koka kola,100,2000,68
+Margarin,923,500,56
+Jogurt,120,1500,23
+Juneci but,23,100,1200
+Pseca hrana,200,100,1200
+Kupus,200,1900,55
+Toalet papir,320,3200,350
