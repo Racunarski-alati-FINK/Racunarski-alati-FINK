@@ -1,6 +1,6 @@
 # Vežbanje
 ## Prvi primer
-Napisati program koji otvara spisak namirnica na stanju u magacinu kao magacin.txt.
+Napisati program koji otvara spisak namirnica na stanju u magacinu kao [magacin.txt](https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/magacin.txt).
 
 Svaka linija fajla predstavlja informaciju o zalihama jednog proizvoda.
 
@@ -30,6 +30,7 @@ with open('narudzbina.txt', 'w') as fajl:                                # otvar
         fajl.write(f"{proizvod['naziv']}, {proizvod['kolicina']}, {proizvod['cena']*proizvod['kolicina']}\n")   
     fajl.write(f'Ukupno {ukupno}')                                       # upisivanje ukupne vrednosti porudžbine
 ```
+
 
 
 
