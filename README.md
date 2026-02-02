@@ -85,7 +85,8 @@ nedelja|   predavanja  |     vežbe
  [v08]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe08.md
  [v09]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe09.md  
  [v10]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe10.md
- [v11]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe11.md 
+ [v11]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe11.md
+ [v12]: https://github.com/Racunarski-alati-FINK/Racunarski-alati-FINK/blob/main/Ve%C5%BEbe/vezbe12.md 
 
 ## Tabela sa rezultatima
 
